@@ -346,13 +346,19 @@ Feel free to edit, shorten, or expand any part of this **content.md** to perfect
 
 
 burgers
-   dalan-burger
-   orfeus-burger
-   trajan-burger
-   zahaa-burger
+   dalan-burger 550
+      Bukë Burgeri, schnitzel, sos, laker e kuqe, laker e bardhe, karrote,qepë, koriander, iceberg, bacon
+   orfeus-burger 470
+      Buke Burgeri, qofte pule, sos burger, rukola të marinuara, djathe cheddar, kastravec
+   trajan-burger 430
+      Bukë Burgeri, qofte viçi, domate,sallate, kastravec turshi,sos burger, djathe cheddar
+   zahaa-burger 570
+      Bukë Burgeri, qofte viçi, sos i vecantë burgeri, domate, avocado,spinaq baby, mente
 sandwiches
-   agona
-   ego
+   agona 450
+      Buke Baguette, gjalp, fileto pule, humus, pomodorini, fara kimino, iceberg, kastravec, piper i kuq, qepë të njoma, spinaq baby i marinuar, borzilok
+   ego 450
+      Bukë Ciabatta, fileto derri, sos, spec të pjekur, qepë të kuqe, djathe feta, rucola e marinuar, koriandër, bacon, spec djegës (opsionale)
 sides
    fried-chicken-tenders
    fries-with-pork
@@ -361,50 +367,83 @@ sides
    onion-rings
 special-pitas
    athos-greek-pita
+      Mish derri/qofte viçi, domate, spec jeshil,djathë cheddar, mozzarella, kaperi, tirokafteri
    eze-beef-pita
-   arab-pita
-   quesadilla
+      Qofte viçi, sos, sallate Pico De Gallo, djathe cheddar, ullinj, speca djegës, kastravec turshi, hurma arabie
+   arab-pita 400
+      Fileto pule e marinuar, sos, laker e kuqe, laker e bardhë, karrote, qepe, djathe cheddar, domate, kaper (Caper bush)
+   quesadilla 470
+      Fileto pule e marinuar, humus, speca të pjekur, djathë feta, djathe cheddar, fara pishe, ullinj, koriander, domate, chilli
    pork-skepasti
+      Fileto derri/gjiro derri, xaxiq/tirokafteri, sallatë Pico De Gallo, spec jeshil, djathë cheddar, mozzarella, kaperi
    chicken-skepasti
+      Fileto pule/gjiro pule, sos, domate, mozzarella, djathe cheddar, spec jeshil, kaperi
 wraps
-   gaius-tortilla
-   krajl-tortilla
-   ramses-tortilla
-   tar-tortilla
+   gaius-tortilla 380
+      Fileto pule/shishqebap pule, sos,mollë, laker e kuqe, karrotë,mente, laker e bardhë
+   krajl-tortilla 450
+      Salcë Guacamola, fileto/shishqebap derri,pomodorini, piper i kuq, spec i pjekur,koriander, qepë te karamelizuara, lime
+   ramses-tortilla 480
+      Fileto pule/shishqebap pule, humus,qepë të njoma, speca të pjekur, avokado, karrotë, sallate mix e marinuar
+   tar-tortilla 450
+      Schnitzel, sos garlic, domate, laker e kuqe, laker e bardhë, karrotë
 salads
    aragula-salad
    caesar-salad
    greek-salad
    spinach-salad
 open-pitas
-   open-chicken-fillet
-   open-chicken-gyros
-   open-pork-gyros
-   kalf-kebab
-   open-chicken-kebab
-   open-piglet-kebab
+   open-chicken-fillet 600
+      Pite, fileto pule e pjekur në skare, sallate iceberg,domate, kastravec, ullinj (te marinuar), patate, sos
+   open-chicken-gyros 550
+      Pite, gjiro pule, sallate iceberg, domate,kastravec, ullinj (te marinuar), patate, sos
+   open-pork-gyros 580
+      Pite, gjiro gici, sallate greke,patate, tzatzik
+   calf-kebab 650
+      Pite, 3 kebabs viçi, sallate greke, patate, tzatziki
+   open-chicken-kebab 590
+      Pite, 3 shishqebap pule, sallate iceberg, domate, kastravec, ullinj (te marinuar), patate, sos
+   open-piglet-kebab 600
+      Pite, 3 shishqebap gici, sallate greke, patate, tzatziki
+   chicken-kebab
+      Pite, 3 kebabs pule, sallate iceberg, domate, kastravec, ullinj (te marinuar), patate, sos
+
+
 hotdogs
-   daza-hotdog
-   ragnar-hotdog
-   soho-hotdog
+   daza-hotdog  350ALL
+      Salce BBQ, salcice, iceberg, kastravec turshi, qepe te njoma, bacon
+   ragnar-hotdog  330ALL
+      Salce BBQ, salcice, kastravec turshi, qepe e karamelizuar, djath chedar
+   soho-hotdog   330ALL
+      Salce guacamola, salcice, sallate Pico De Gallo, qepe te njoma
 grill
-   berxolle-gici
-   berxolle-qingji
-   brinje-qingji
-   fileto-pule
-   krahe-pule
+   berxolle-gici 750ALL
+      500gr
+   berxolle-qingji 1300ALL
+      500gr
+   brinje-qingji 1300ALL
+      500gr
+   fileto-pule 600ALL
+      500gr
+   krahe-pule 650ALL
+      500gr
 classic-pitas
-   beef-kebab-pita
+   chicken-gyros 270ALL
+      Pite e marinuar, mish pule, sos, iceberg, domate, patate, paprika
+   pork-gyros 270ALL
+      Pite e marinuar, mish derri, tzatziki, qepe, domate, patate, paprika
+   beef-kebab-pita 300ALL
       Pite, kebab vici, domate, qepe e kuqe e marinuar, kastravec, tzatziki
-   chicken-kebab-pita
+   chicken-kebab-pita 300ALL
       Pite, kebab pule, sallate iceberg, domate, kastravec, sos, koriander
-   chicken-shish-kebab
+   chicken-shish-kebab 300ALL
       Pite e marinuar,shishqebap, sos garlic, iceberg, speca te pjekur, djathe feta
-   pork-shish-kebab
-   chicken-gyros
-   pork-gyros
-   schnitzel-pita
-   vegetarian-pita
+   pork-shish-kebap 300ALL
+      Pite e marinuar, shishqebap, tzatziki, domate, qepe, djath feta, speca te pjekura
+   schnitzel-pita 300ALL
+      Pite e marinuar, schnitzel, sos garlic, laker karrote, qepe te njoma
+   vegetarian-pita 250ALL
+      Pite e marinuar, humus, domate, iceberg, patate, qepe
 bowls
    ASPASIA-BOWL 480ALL
       Pite, schnitzel, sos garlic, patate, laker e kuqe, laker e bardhe, karrote
