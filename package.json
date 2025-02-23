@@ -1,0 +1,25 @@
+{
+  "name": "zahaastreetfood",
+  "version": "2.8.1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",        
+    "dev": "nodemon app.js",       
+    "sass": "sass --watch scss/style.scss public/css/style.css"
+  },
+  "keywords": [],
+  "author": "aurel.lelo.al",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "Official source code of zahaastreetfood.al",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "i18n": "^0.15.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "sass": "^1.85.0"
+  }
+}
