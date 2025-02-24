@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+<% if (items && items.length) { %>
+    <% items.forEach(category => { %>
+      <h2>
+        <%= (locale === 'sq') ? category.category_sq : category.category_en %>
+      </h2>
+  
+      <% category.items.forEach(item => { %>
+        <div>
+          <h3>
+            <%= (locale === 'sq') ? item.name_sq : item.name_en %>
+          </h3>
+          <p>
+            <%= (locale === 'sq') ? item.description_sq : item.description_en %>
+          </p>
+          <strong><%= item.price %> ALL</strong>
+        </div>
+      <% }) %>
+    <% }) %>
+  <% } else { %>
+    <p>No menu items available.</p>
+  <% } %>
+  
+  <%- include('partials/footer') %>

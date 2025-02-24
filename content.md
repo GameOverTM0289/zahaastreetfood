@@ -360,11 +360,15 @@ sandwiches
    ego 450
       Bukë Ciabatta, fileto derri, sos, spec të pjekur, qepë të kuqe, djathe feta, rucola e marinuar, koriandër, bacon, spec djegës (opsionale)
 sides
-   fried-chicken-tenders
-   fries-with-pork
-   meatballs
-   mozzarella-sticks
-   onion-rings
+   chicken-tenders 550
+      x8 fried chicken tenders
+   fries-with-pork 500
+   meatballs 350
+      x8 Qofte vici ose pule
+   mozzarella-sticks 340
+      x5 mozzarella sticks
+   onion-rings & sos 250
+      x8 onion rings with sos
 special-pitas
    athos-greek-pita
       Mish derri/qofte viçi, domate, spec jeshil,djathë cheddar, mozzarella, kaperi, tirokafteri
@@ -388,10 +392,14 @@ wraps
    tar-tortilla 450
       Schnitzel, sos garlic, domate, laker e kuqe, laker e bardhë, karrotë
 salads
-   aragula-salad
-   caesar-salad
-   greek-salad
-   spinach-salad
+   aragula-salad 500
+      Sallatë rucola, pomodorini, djathë parmigiano, majdanoz, mente, avocado,lëng limoni, fara pishe të pjekura,vaj ulliri, shegë, aceto balsamico, piper
+   caesar-salad 490
+      Sallate iceberg, fileto pule skarrë,pomodorini, sos, misër, bukë e thekur e marinuar, djathe parmigiano
+   greek-salad 450
+      Domate, kastravec, spec jeshil,qepë të kuqe, ullinj, djathë feta,kaperi, rigon, vaj ulliri, mente
+   spinach-salad 450
+      Spinaq, domate të thara, kastravec,mente, djathe parmigiano, fara pishe, vaj ulliri, aceto balsamico
 open-pitas
    open-chicken-fillet 600
       Pite, fileto pule e pjekur në skare, sallate iceberg,domate, kastravec, ullinj (te marinuar), patate, sos
