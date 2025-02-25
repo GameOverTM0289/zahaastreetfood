@@ -1,70 +1,79 @@
 <%- include('partials/header') %>
+<title><%= __('MENU_PAGE_TITLE') %></title>
 
-<main>
-  <!-- i18n key: "MENU_TITLE" -->
-  <h1><%= __('MENU_TITLE') %></h1>
+<main class="menu-page" role="main">
+  <!-- Main page heading (SEO-friendly) -->
+  <h1 class="menu-page__title"><%= __('MENU_TITLE') %></h1>
 
-  <!-- If items exist, loop through categories and their items -->
   <% if (items && items.length) { %>
+    <!-- Container for all menu categories -->
+    <section class="menu-page__categories">
+      <% items.forEach(category => { %>
+        <!-- Each category as an article for semantic grouping -->
+        <article class="menu-category" role="region">
+          <h2 class="menu-category__title">
+            <%= (locale === 'sq')
+                 ? category.category_sq
+                 : category.category_en
+            %>
+          </h2>
 
-    <% items.forEach(category => { %>
-      <section class="menu-category">
-        <!-- category_en vs category_sq -->
-        <h2>
-          <%= (locale === 'sq')
-               ? category.category_sq
-               : category.category_en
-          %>
-        </h2>
+          <!-- Container for the items in this category -->
+          <div class="menu-category__items">
+            <% category.items.forEach(item => { %>
+              <!-- 
+                Use microdata (Schema.org) for Menu Items 
+                itemtype="http://schema.org/MenuItem" helps search engines understand this is a menu item
+              -->
+              <article class="menu-item"
+                       itemscope
+                       itemtype="http://schema.org/MenuItem"
+                       role="article">
 
-        <div class="menu-items">
-          <!-- Now loop each item in this category -->
-          <% category.items.forEach(item => { %>
-            <div class="menu-item">
-              <!-- Display the image using item.imagePath -->
-              <img
-                src="<%= item.imagePath %>"
-                alt="<%= (locale === 'sq')
-                         ? item.name_sq
-                         : item.name_en
-                     %>"
-              />
+                <!-- Image as a figure for better semantics -->
+                <figure class="menu-item__image-wrapper">
+                  <img class="menu-item__image"
+                       src="<%= item.imagePath %>"
+                       alt="<%= (locale === 'sq') ? item.name_sq : item.name_en %>"
+                       itemprop="image" />
+                </figure>
 
-              <!-- Display name in correct language -->
-              <h3>
-                <%= (locale === 'sq')
-                      ? item.name_sq
-                      : item.name_en
-                %>
-              </h3>
+                <!-- Item name -->
+                <h3 class="menu-item__name" itemprop="name">
+                  <%= (locale === 'sq')
+                        ? item.name_sq
+                        : item.name_en
+                  %>
+                </h3>
 
-              <!-- Display description in correct language -->
-              <p>
-                <%= (locale === 'sq')
-                      ? item.description_sq
-                      : item.description_en
-                %>
-              </p>
+                <!-- Description -->
+                <p class="menu-item__description" itemprop="description">
+                  <%= (locale === 'sq')
+                        ? item.description_sq
+                        : item.description_en
+                  %>
+                </p>
 
-              <!-- Price (if any) -->
-              <strong>
-                <% if (item.price && item.price.trim() !== '') { %>
-                  <%= item.price %>
-                <% } else { %>
-                  <!-- i18n key: "PRICE_UNAVAILABLE" -->
-                  <%= __('PRICE_UNAVAILABLE') %>
-                <% } %>
-              </strong>
-            </div>
-          <% }) %>
-        </div>
-      </section>
-    <% }) %>
-
+                <!-- Price (if available) -->
+                <span class="menu-item__price"
+                      itemprop="offers"
+                      itemscope
+                      itemtype="http://schema.org/Offer">
+                  <% if (item.price && item.price.trim() !== '') { %>
+                    <span itemprop="price"><%= item.price %></span>
+                  <% } else { %>
+                    <%= __('PRICE_UNAVAILABLE') %>
+                  <% } %>
+                </span>
+              </article>
+            <% }) %>
+          </div>
+        </article>
+      <% }) %>
+    </section>
   <% } else { %>
-    <!-- If no items, show a fallback message -->
-    <!-- i18n key: "MENU_NO_ITEMS" -->
-    <p><%= __('MENU_NO_ITEMS') %></p>
+    <!-- Fallback if no items exist -->
+    <p class="menu-page__no-items"><%= __('MENU_NO_ITEMS') %></p>
   <% } %>
 </main>
 

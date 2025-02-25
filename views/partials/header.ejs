@@ -1,17 +1,42 @@
-<header>
-    <nav>
-      <ul>
-        <li><a href="/"><%= __('HOME_TITLE') %></a></li>
-        <li><a href="/menu"><%= __('MENU_TITLE') %></a></li>
-        <li><a href="/about"><%= __('ABOUT_TITLE') %></a></li>
-        <li><a href="/contact"><%= __('CONTACT_TITLE') %></a></li>
-        <li><a href="/gallery"><%= __('GALLERY_TITLE') %></a></li>
-        <!-- Language Switch Links -->
-        <li>
-          <a href="/lang/sq">Shqip</a> | <a href="/lang/en">English</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <hr>
-  
+<!DOCTYPE html>
+<html lang="<%= locale || 'en' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Basic SEO meta -->
+  <meta name="description" content="<%= __('PAGE_DESCRIPTION') %>">
+
+  <!-- Link compiled CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <nav class="site-nav" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <p class="site-logo">ZAHAA</p>
+      <li class="nav-item">
+        <a class="nav-link" href="/"><%= __('NAV_HOME') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/menu"><%= __('NAV_MENU') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about"><%= __('NAV_ABOUT') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact"><%= __('NAV_CONTACT') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/gallery"><%= __('NAV_GALLERY') %></a>
+      </li>
+      <!-- Language Switch Links -->
+      <li class="nav-item nav-lang-switch">
+        <a href="/lang/sq">Shqip</a> | <a href="/lang/en">English</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<hr>
