@@ -1,25 +1,71 @@
 <%- include('partials/header') %>
 
-<% if (items && items.length) { %>
+<main>
+  <!-- i18n key: "MENU_TITLE" -->
+  <h1><%= __('MENU_TITLE') %></h1>
+
+  <!-- If items exist, loop through categories and their items -->
+  <% if (items && items.length) { %>
+
     <% items.forEach(category => { %>
-      <h2>
-        <%= (locale === 'sq') ? category.category_sq : category.category_en %>
-      </h2>
-  
-      <% category.items.forEach(item => { %>
-        <div>
-          <h3>
-            <%= (locale === 'sq') ? item.name_sq : item.name_en %>
-          </h3>
-          <p>
-            <%= (locale === 'sq') ? item.description_sq : item.description_en %>
-          </p>
-          <strong><%= item.price %> ALL</strong>
+      <section class="menu-category">
+        <!-- category_en vs category_sq -->
+        <h2>
+          <%= (locale === 'sq')
+               ? category.category_sq
+               : category.category_en
+          %>
+        </h2>
+
+        <div class="menu-items">
+          <!-- Now loop each item in this category -->
+          <% category.items.forEach(item => { %>
+            <div class="menu-item">
+              <!-- Display the image using item.imagePath -->
+              <img
+                src="<%= item.imagePath %>"
+                alt="<%= (locale === 'sq')
+                         ? item.name_sq
+                         : item.name_en
+                     %>"
+              />
+
+              <!-- Display name in correct language -->
+              <h3>
+                <%= (locale === 'sq')
+                      ? item.name_sq
+                      : item.name_en
+                %>
+              </h3>
+
+              <!-- Display description in correct language -->
+              <p>
+                <%= (locale === 'sq')
+                      ? item.description_sq
+                      : item.description_en
+                %>
+              </p>
+
+              <!-- Price (if any) -->
+              <strong>
+                <% if (item.price && item.price.trim() !== '') { %>
+                  <%= item.price %>
+                <% } else { %>
+                  <!-- i18n key: "PRICE_UNAVAILABLE" -->
+                  <%= __('PRICE_UNAVAILABLE') %>
+                <% } %>
+              </strong>
+            </div>
+          <% }) %>
         </div>
-      <% }) %>
+      </section>
     <% }) %>
+
   <% } else { %>
-    <p>No menu items available.</p>
+    <!-- If no items, show a fallback message -->
+    <!-- i18n key: "MENU_NO_ITEMS" -->
+    <p><%= __('MENU_NO_ITEMS') %></p>
   <% } %>
-  
-  <%- include('partials/footer') %>
+</main>
+
+<%- include('partials/footer') %>

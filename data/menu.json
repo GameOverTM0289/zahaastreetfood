@@ -1,433 +1,486 @@
 [
-    {
-      "category_en": "Burgers",
-      "category_sq": "Burgerë",
-      "items": [
-        {
-          "name_en": "Dalan Burger",
-          "name_sq": "Dalan Burger",
-          "description_en": "Burger bun, schnitzel, sauce, red cabbage, white cabbage, carrot, onion, coriander, iceberg, bacon",
-          "description_sq": "Bukë Burgeri, schnitzel, sos, lakër e kuqe, lakër e bardhë, karrotë, qepë, koriander, iceberg, bacon",
-          "price": "550"
-        },
-        {
-          "name_en": "Orfeus Burger",
-          "name_sq": "Orfeus Burger",
-          "description_en": "Burger bun, chicken patty, burger sauce, marinated arugula, cheddar cheese, cucumber",
-          "description_sq": "Bukë Burgeri, qofte pule, sos burger, rukola të marinuara, djathë cheddar, kastravec",
-          "price": "470"
-        },
-        {
-          "name_en": "Trajan Burger",
-          "name_sq": "Trajan Burger",
-          "description_en": "Burger bun, beef patty, tomato, lettuce, pickled cucumber, burger sauce, cheddar cheese",
-          "description_sq": "Bukë Burgeri, qofte viçi, domate, sallatë, kastravec turshi, sos burger, djathë cheddar",
-          "price": "430"
-        },
-        {
-          "name_en": "Zahaa Burger",
-          "name_sq": "Zahaa Burger",
-          "description_en": "Burger bun, beef patty, special burger sauce, tomato, avocado, baby spinach, mint",
-          "description_sq": "Bukë Burgeri, qofte viçi, sos i veçantë burgeri, domate, avocado, spinaq baby, mente",
-          "price": "570"
-        }
-      ]
-    },
-    {
-      "category_en": "Sandwiches",
-      "category_sq": "Sanduiçe",
-      "items": [
-        {
-          "name_en": "Agona",
-          "name_sq": "Agona",
-          "description_en": "Baguette bread, butter, chicken fillet, hummus, cherry tomatoes, cumin seeds, iceberg, cucumber, red pepper, spring onions, marinated baby spinach, basil",
-          "description_sq": "Bukë Baguette, gjalp, fileto pule, humus, pomodorini, fara kimino, iceberg, kastravec, piper i kuq, qepë të njoma, spinaq baby i marinuar, borzilok",
-          "price": "450"
-        },
-        {
-          "name_en": "Ego",
-          "name_sq": "Ego",
-          "description_en": "Ciabatta bread, pork fillet, sauce, roasted peppers, red onion, feta cheese, marinated rucola, coriander, bacon, chili pepper (optional)",
-          "description_sq": "Bukë Ciabatta, fileto derri, sos, spec të pjekur, qepë të kuqe, djathë feta, rucola e marinuar, koriandër, bacon, spec djegës (opsionale)",
-          "price": "450"
-        }
-      ]
-    },
-    {
-      "category_en": "Sides",
-      "category_sq": "Pjata Anësore",
-      "items": [
-        {
-          "name_en": "Chicken Tenders",
-          "name_sq": "Chicken Tenders",
-          "description_en": "x8 fried chicken tenders",
-          "description_sq": "x8 copëza pule të skuqura",
-          "price": "550"
-        },
-        {
-          "name_en": "Fries with Pork",
-          "name_sq": "Fries with Pork",
-          "description_en": "Fries with pork",
-          "description_sq": "Patate të skuqura me mish derri",
-          "price": "500"
-        },
-        {
-          "name_en": "Meatballs",
-          "name_sq": "Qofte",
-          "description_en": "x8 beef or chicken meatballs",
-          "description_sq": "x8 Qofte viçi ose pule",
-          "price": "350"
-        },
-        {
-          "name_en": "Mozzarella Sticks",
-          "name_sq": "Mozzarella Sticks",
-          "description_en": "x5 mozzarella sticks",
-          "description_sq": "x5 shkopinj mozzarella",
-          "price": "340"
-        },
-        {
-          "name_en": "Onion Rings & Sauce",
-          "name_sq": "Onion Rings & Sauce",
-          "description_en": "x8 onion rings with sauce",
-          "description_sq": "x8 unaza qepësh me salcë",
-          "price": "250"
-        }
-      ]
-    },
-    {
-      "category_en": "Special Pitas",
-      "category_sq": "Pita Speciale",
-      "items": [
-        {
-          "name_en": "Athos Greek Pita",
-          "name_sq": "Athos Greek Pita",
-          "description_en": "Pork meat/beef patty, tomato, green pepper, cheddar cheese, mozzarella, capers, tirokafteri",
-          "description_sq": "Mish derri/qofte viçi, domate, spec jeshil, djathë cheddar, mozzarella, kaperi, tirokafteri",
-          "price": ""
-        },
-        {
-          "name_en": "Eze Beef Pita",
-          "name_sq": "Eze Beef Pita",
-          "description_en": "Beef patty, sauce, Pico De Gallo salad, cheddar cheese, olives, hot peppers, pickled cucumber, Arabian dates",
-          "description_sq": "Qofte viçi, sos, sallatë Pico De Gallo, djathë cheddar, ullinj, speca djegës, kastravec turshi, hurma arabie",
-          "price": ""
-        },
-        {
-          "name_en": "Arab Pita",
-          "name_sq": "Arab Pita",
-          "description_en": "Marinated chicken fillet, sauce, red cabbage, white cabbage, carrot, onion, cheddar cheese, tomato, capers",
-          "description_sq": "Fileto pule e marinuar, sos, lakër e kuqe, lakër e bardhë, karrotë, qepë, djathë cheddar, domate, kaper",
-          "price": "400"
-        },
-        {
-          "name_en": "Quesadilla",
-          "name_sq": "Quesadilla",
-          "description_en": "Marinated chicken fillet, hummus, roasted peppers, feta cheese, cheddar cheese, pine nuts, olives, coriander, tomato, chili",
-          "description_sq": "Fileto pule e marinuar, humus, speca të pjekur, djathë feta, djathë cheddar, fara pishe, ullinj, koriander, domate, chilli",
-          "price": "470"
-        },
-        {
-          "name_en": "Pork Skepasti",
-          "name_sq": "Pork Skepasti",
-          "description_en": "Pork fillet/pork gyro, tzatziki/tirokafteri, Pico De Gallo salad, green pepper, cheddar cheese, mozzarella, capers",
-          "description_sq": "Fileto derri/gjiro derri, xaxiq/tirokafteri, sallatë Pico De Gallo, spec jeshil, djathë cheddar, mozzarella, kaperi",
-          "price": ""
-        },
-        {
-          "name_en": "Chicken Skepasti",
-          "name_sq": "Chicken Skepasti",
-          "description_en": "Chicken fillet/chicken gyro, sauce, tomato, mozzarella, cheddar cheese, green pepper, capers",
-          "description_sq": "Fileto pule/gjiro pule, sos, domate, mozzarella, djathë cheddar, spec jeshil, kaperi",
-          "price": ""
-        }
-      ]
-    },
-    {
-      "category_en": "Wraps",
-      "category_sq": "Wraps",
-      "items": [
-        {
-          "name_en": "Gaius Tortilla",
-          "name_sq": "Gaius Tortilla",
-          "description_en": "Chicken fillet/chicken shish kebab, sauce, apple, red cabbage, carrot, mint, white cabbage",
-          "description_sq": "Fileto pule/shishqebap pule, sos, mollë, lakër e kuqe, karrotë, mente, lakër e bardhë",
-          "price": "380"
-        },
-        {
-          "name_en": "Krajl Tortilla",
-          "name_sq": "Krajl Tortilla",
-          "description_en": "Guacamole sauce, pork fillet/pork shish kebab, cherry tomatoes, red pepper, roasted pepper, coriander, caramelized onions, lime",
-          "description_sq": "Salcë Guacamola, fileto/shishqebap derri, pomodorini, piper i kuq, spec i pjekur, koriander, qepë të karamelizuara, lime",
-          "price": "450"
-        },
-        {
-          "name_en": "Ramses Tortilla",
-          "name_sq": "Ramses Tortilla",
-          "description_en": "Chicken fillet/chicken shish kebab, hummus, spring onions, roasted peppers, avocado, carrot, mixed marinated salad",
-          "description_sq": "Fileto pule/shishqebap pule, humus, qepë të njoma, speca të pjekur, avokado, karrotë, sallatë mix e marinuar",
-          "price": "480"
-        },
-        {
-          "name_en": "Tar Tortilla",
-          "name_sq": "Tar Tortilla",
-          "description_en": "Schnitzel, garlic sauce, tomato, red cabbage, white cabbage, carrot",
-          "description_sq": "Schnitzel, sos garlic, domate, lakër e kuqe, lakër e bardhë, karrotë",
-          "price": "450"
-        }
-      ]
-    },
-    {
-      "category_en": "Salads",
-      "category_sq": "Sallata",
-      "items": [
-        {
-          "name_en": "Arugula Salad",
-          "name_sq": "Sallatë Rukola",
-          "description_en": "Rucola salad, cherry tomatoes, parmigiano cheese, parsley, mint, avocado, lemon juice, toasted pine nuts, olive oil, pomegranate, balsamic vinegar, pepper",
-          "description_sq": "Sallatë rucola, pomodorini, djathë parmigiano, majdanoz, mente, avocado, lëng limoni, fara pishe të pjekura, vaj ulliri, shegë, aceto balsamico, piper",
-          "price": "500"
-        },
-        {
-          "name_en": "Caesar Salad",
-          "name_sq": "Sallatë Caesar",
-          "description_en": "Iceberg lettuce, grilled chicken fillet, cherry tomatoes, sauce, corn, marinated croutons, parmigiano cheese",
-          "description_sq": "Sallatë iceberg, fileto pule skarrë, pomodorini, sos, misër, bukë e thekur e marinuar, djathë parmigiano",
-          "price": "490"
-        },
-        {
-          "name_en": "Greek Salad",
-          "name_sq": "Sallatë Greke",
-          "description_en": "Tomato, cucumber, green pepper, red onion, olives, feta cheese, capers, oregano, olive oil, mint",
-          "description_sq": "Domate, kastravec, spec jeshil, qepë të kuqe, ullinj, djathë feta, kaperi, rigon, vaj ulliri, mente",
-          "price": "450"
-        },
-        {
-          "name_en": "Spinach Salad",
-          "name_sq": "Sallatë Spinaq",
-          "description_en": "Spinach, sun-dried tomatoes, cucumber, mint, parmigiano cheese, pine nuts, olive oil, balsamic vinegar",
-          "description_sq": "Spinaq, domate të thara, kastravec, mente, djathë parmigiano, fara pishe, vaj ulliri, aceto balsamico",
-          "price": "450"
-        }
-      ]
-    },
-    {
-      "category_en": "Open Pitas",
-      "category_sq": "Pita të Hapura",
-      "items": [
-        {
-          "name_en": "Open Chicken Fillet",
-          "name_sq": "Open Chicken Fillet",
-          "description_en": "Pita, grilled chicken fillet, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
-          "description_sq": "Pite, fileto pule e pjekur në skarë, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
-          "price": "600"
-        },
-        {
-          "name_en": "Open Chicken Gyros",
-          "name_sq": "Open Chicken Gyros",
-          "description_en": "Pita, chicken gyro, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
-          "description_sq": "Pite, gjiro pule, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
-          "price": "550"
-        },
-        {
-          "name_en": "Open Pork Gyros",
-          "name_sq": "Open Pork Gyros",
-          "description_en": "Pita, pork gyro, Greek salad, fries, tzatziki",
-          "description_sq": "Pite, gjiro gici, sallatë greke, patate, tzatziki",
-          "price": "580"
-        },
-        {
-          "name_en": "Calf Kebab",
-          "name_sq": "Calf Kebab",
-          "description_en": "Pita, 3 beef kebabs, Greek salad, fries, tzatziki",
-          "description_sq": "Pite, 3 kebabë viçi, sallatë greke, patate, tzatziki",
-          "price": "650"
-        },
-        {
-          "name_en": "Open Chicken Kebab",
-          "name_sq": "Open Chicken Kebab",
-          "description_en": "Pita, 3 chicken shish kebabs, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
-          "description_sq": "Pite, 3 shishqebap pule, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
-          "price": "590"
-        },
-        {
-          "name_en": "Open Piglet Kebab",
-          "name_sq": "Open Piglet Kebab",
-          "description_en": "Pita, 3 pork shish kebabs, Greek salad, fries, tzatziki",
-          "description_sq": "Pite, 3 shishqebap gici, sallatë greke, patate, tzatziki",
-          "price": "600"
-        },
-        {
-          "name_en": "Chicken Kebab",
-          "name_sq": "Chicken Kebab",
-          "description_en": "Pita, 3 chicken kebabs, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
-          "description_sq": "Pite, 3 kebabë pule, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
-          "price": ""
-        }
-      ]
-    },
-    {
-      "category_en": "Hotdogs",
-      "category_sq": "Hotdogs",
-      "items": [
-        {
-          "name_en": "Daza Hotdog",
-          "name_sq": "Daza Hotdog",
-          "description_en": "BBQ sauce, sausage, iceberg lettuce, pickled cucumber, spring onions, bacon",
-          "description_sq": "Salcë BBQ, salçiçe, iceberg, kastravec turshi, qepë të njoma, bacon",
-          "price": "350 ALL"
-        },
-        {
-          "name_en": "Ragnar Hotdog",
-          "name_sq": "Ragnar Hotdog",
-          "description_en": "BBQ sauce, sausage, pickled cucumber, caramelized onion, cheddar cheese",
-          "description_sq": "Salcë BBQ, salçiçe, kastravec turshi, qepë e karamelizuar, djath cheddar",
-          "price": "330 ALL"
-        },
-        {
-          "name_en": "Soho Hotdog",
-          "name_sq": "Soho Hotdog",
-          "description_en": "Guacamole sauce, sausage, Pico De Gallo salad, spring onions",
-          "description_sq": "Salcë guacamola, salçiçe, sallatë Pico De Gallo, qepë të njoma",
-          "price": "330 ALL"
-        }
-      ]
-    },
-    {
-      "category_en": "Grill",
-      "category_sq": "Zgarë",
-      "items": [
-        {
-          "name_en": "Pork Chop",
-          "name_sq": "Bërxollë Gici",
-          "description_en": "500g",
-          "description_sq": "500gr",
-          "price": "750 ALL"
-        },
-        {
-          "name_en": "Lamb Chop",
-          "name_sq": "Bërxollë Qingji",
-          "description_en": "500g",
-          "description_sq": "500gr",
-          "price": "1300 ALL"
-        },
-        {
-          "name_en": "Lamb Ribs",
-          "name_sq": "Brinjë Qingji",
-          "description_en": "500g",
-          "description_sq": "500gr",
-          "price": "1300 ALL"
-        },
-        {
-          "name_en": "Chicken Fillet",
-          "name_sq": "Fileto Pule",
-          "description_en": "500g",
-          "description_sq": "500gr",
-          "price": "600 ALL"
-        },
-        {
-          "name_en": "Chicken Wings",
-          "name_sq": "Krahë Pule",
-          "description_en": "500g",
-          "description_sq": "500gr",
-          "price": "650 ALL"
-        }
-      ]
-    },
-    {
-      "category_en": "Classic Pitas",
-      "category_sq": "Pita Klasike",
-      "items": [
-        {
-          "name_en": "Chicken Gyros",
-          "name_sq": "Chicken Gyros",
-          "description_en": "Marinated pita, chicken meat, sauce, iceberg lettuce, tomato, fries, paprika",
-          "description_sq": "Pite e marinuar, mish pule, sos, iceberg, domate, patate, paprika",
-          "price": "270 ALL"
-        },
-        {
-          "name_en": "Pork Gyros",
-          "name_sq": "Pork Gyros",
-          "description_en": "Marinated pita, pork meat, tzatziki, onion, tomato, fries, paprika",
-          "description_sq": "Pite e marinuar, mish derri, tzatziki, qepë, domate, patate, paprika",
-          "price": "270 ALL"
-        },
-        {
-          "name_en": "Beef Kebab Pita",
-          "name_sq": "Beef Kebab Pita",
-          "description_en": "Pita, beef kebab, tomato, marinated red onion, cucumber, tzatziki",
-          "description_sq": "Pite, kebab viçi, domate, qepë e kuqe e marinuar, kastravec, tzatziki",
-          "price": "300 ALL"
-        },
-        {
-          "name_en": "Chicken Kebab Pita",
-          "name_sq": "Chicken Kebab Pita",
-          "description_en": "Pita, chicken kebab, iceberg lettuce, tomato, cucumber, sauce, coriander",
-          "description_sq": "Pite, kebab pule, sallatë iceberg, domate, kastravec, sos, koriander",
-          "price": "300 ALL"
-        },
-        {
-          "name_en": "Chicken Shish Kebab",
-          "name_sq": "Chicken Shish Kebab",
-          "description_en": "Marinated pita, shish kebab, garlic sauce, iceberg lettuce, roasted peppers, feta cheese",
-          "description_sq": "Pite e marinuar, shishqebap, sos garlic, iceberg, speca të pjekura, djathë feta",
-          "price": "300 ALL"
-        },
-        {
-          "name_en": "Pork Shish Kebab",
-          "name_sq": "Pork Shish Kebab",
-          "description_en": "Marinated pita, shish kebab, tzatziki, tomato, onion, feta cheese, roasted peppers",
-          "description_sq": "Pite e marinuar, shishqebap, tzatziki, domate, qepë, djath feta, speca të pjekura",
-          "price": "300 ALL"
-        },
-        {
-          "name_en": "Schnitzel Pita",
-          "name_sq": "Schnitzel Pita",
-          "description_en": "Marinated pita, schnitzel, garlic sauce, cabbage-carrot, spring onions",
-          "description_sq": "Pite e marinuar, schnitzel, sos garlic, lakër karrotë, qepë të njoma",
-          "price": "300 ALL"
-        },
-        {
-          "name_en": "Vegetarian Pita",
-          "name_sq": "Pite Vegjetariane",
-          "description_en": "Marinated pita, hummus, tomato, iceberg lettuce, fries, onion",
-          "description_sq": "Pite e marinuar, humus, domate, iceberg, patate, qepë",
-          "price": "250 ALL"
-        }
-      ]
-    },
-    {
-      "category_en": "Bowls",
-      "category_sq": "Bowls",
-      "items": [
-        {
-          "name_en": "Aspasia Bowl",
-          "name_sq": "Aspasia Bowl",
-          "description_en": "Pita, schnitzel, garlic sauce, fries, red cabbage, white cabbage, carrot",
-          "description_sq": "Pite, schnitzel, sos garlic, patate, lakër e kuqe, lakër e bardhë, karrotë",
-          "price": "480 ALL"
-        },
-        {
-          "name_en": "Eze Bowl",
-          "name_sq": "Eze Bowl",
-          "description_en": "Pita, beef patty, fries, sauce, olives, Pico de Gallo salad, hot peppers, Arabian dates, pickled cucumber",
-          "description_sq": "Pite, qofte viçi, patate, sos, ullinj, sallatë Pico de Gallo, speca djegës, hurma arabie, kastravec turshi",
-          "price": "550 ALL"
-        },
-        {
-          "name_en": "Orsai Bowl",
-          "name_sq": "Orsai Bowl",
-          "description_en": "Pita, 2 pork shish kebabs/pork gyro, Greek salad, tzatziki, fries",
-          "description_sq": "Pite, 2 shishqebap gici/gjiro gici, sallatë greke, xaxiq, patate",
-          "price": "490 ALL"
-        },
-        {
-          "name_en": "Surah Bowl",
-          "name_sq": "Surah Bowl",
-          "description_en": "Pita, 2 chicken shish kebabs/chicken gyro, iceberg lettuce, cherry tomatoes, spring onions, cucumber, olives, sauce, fries",
-          "description_sq": "Pite, 2 shishqebap pule/gjiro pule, iceberg, pomodorini, qepë të njoma, kastravec, ullinj, sos, patate",
-          "price": "490 ALL"
-        }
-      ]
-    }
-  ]
-  
+
+  {
+    "category_en": "Classic Pitas",
+    "category_sq": "Pita Klasike",
+    "items": [
+      {
+        "name_en": "Chicken Gyros",
+        "name_sq": "Chicken Gyros",
+        "description_en": "Marinated pita, chicken meat, sauce, iceberg lettuce, tomato, fries, paprika",
+        "description_sq": "Pite e marinuar, mish pule, sos, iceberg, domate, patate, paprika",
+        "price": "270 ALL",
+        "imagePath": "/images/chicken-gyros.png"
+      },
+      {
+        "name_en": "Pork Gyros",
+        "name_sq": "Pork Gyros",
+        "description_en": "Marinated pita, pork meat, tzatziki, onion, tomato, fries, paprika",
+        "description_sq": "Pite e marinuar, mish derri, tzatziki, qepë, domate, patate, paprika",
+        "price": "270 ALL",
+        "imagePath": "/images/pork-gyros.png"
+      },
+      {
+        "name_en": "Beef Kebab Pita",
+        "name_sq": "Beef Kebab Pita",
+        "description_en": "Pita, beef kebab, tomato, marinated red onion, cucumber, tzatziki",
+        "description_sq": "Pite, kebab viçi, domate, qepë e kuqe e marinuar, kastravec, tzatziki",
+        "price": "300 ALL",
+        "imagePath": "/images/beef-kebab-pita.png"
+      },
+      {
+        "name_en": "Chicken Kebab Pita",
+        "name_sq": "Chicken Kebab Pita",
+        "description_en": "Pita, chicken kebab, iceberg lettuce, tomato, cucumber, sauce, coriander",
+        "description_sq": "Pite, kebab pule, sallatë iceberg, domate, kastravec, sos, koriander",
+        "price": "300 ALL",
+        "imagePath": "/images/chicken-kebab-pita.png"
+      },
+      {
+        "name_en": "Chicken Shish Kebab",
+        "name_sq": "Chicken Shish Kebab",
+        "description_en": "Marinated pita, shish kebab, garlic sauce, iceberg lettuce, roasted peppers, feta cheese",
+        "description_sq": "Pite e marinuar, shishqebap, sos garlic, iceberg, speca të pjekura, djathë feta",
+        "price": "300 ALL",
+        "imagePath": "/images/chicken-shish-kebab.png"
+      },
+      {
+        "name_en": "Pork Shish Kebab",
+        "name_sq": "Pork Shish Kebab",
+        "description_en": "Marinated pita, shish kebab, tzatziki, tomato, onion, feta cheese, roasted peppers",
+        "description_sq": "Pite e marinuar, shishqebap, tzatziki, domate, qepë, djath feta, speca të pjekura",
+        "price": "300 ALL",
+        "imagePath": "/images/pork-shish-kebab.png"
+      },
+      {
+        "name_en": "Schnitzel Pita",
+        "name_sq": "Schnitzel Pita",
+        "description_en": "Marinated pita, schnitzel, garlic sauce, cabbage-carrot, spring onions",
+        "description_sq": "Pite e marinuar, schnitzel, sos garlic, lakër karrotë, qepë të njoma",
+        "price": "300 ALL",
+        "imagePath": "/images/schnitzel-pita.png"
+      },
+      {
+        "name_en": "Vegetarian Pita",
+        "name_sq": "Pite Vegjetariane",
+        "description_en": "Marinated pita, hummus, tomato, iceberg lettuce, fries, onion",
+        "description_sq": "Pite e marinuar, humus, domate, iceberg, patate, qepë",
+        "price": "250 ALL",
+        "imagePath": "/images/vegetarian-pita.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Wraps",
+    "category_sq": "Wraps",
+    "items": [
+      {
+        "name_en": "Gaius Tortilla",
+        "name_sq": "Gaius Tortilla",
+        "description_en": "Chicken fillet/chicken shish kebab, sauce, apple, red cabbage, carrot, mint, white cabbage",
+        "description_sq": "Fileto pule/shishqebap pule, sos, mollë, lakër e kuqe, karrotë, mente, lakër e bardhë",
+        "price": "380",
+        "imagePath": "/images/gaius-tortilla.png"
+      },
+      {
+        "name_en": "Krajl Tortilla",
+        "name_sq": "Krajl Tortilla",
+        "description_en": "Guacamole sauce, pork fillet/pork shish kebab, cherry tomatoes, red pepper, roasted pepper, coriander, caramelized onions, lime",
+        "description_sq": "Salcë Guacamola, fileto/shishqebap derri, pomodorini, piper i kuq, spec i pjekur, koriander, qepë të karamelizuara, lime",
+        "price": "450",
+        "imagePath": "/images/krajl-tortilla.png"
+      },
+      {
+        "name_en": "Ramses Tortilla",
+        "name_sq": "Ramses Tortilla",
+        "description_en": "Chicken fillet/chicken shish kebab, hummus, spring onions, roasted peppers, avocado, carrot, mixed marinated salad",
+        "description_sq": "Fileto pule/shishqebap pule, humus, qepë të njoma, speca të pjekur, avokado, karrotë, sallatë mix e marinuar",
+        "price": "480",
+        "imagePath": "/images/ramses-tortilla.png"
+      },
+      {
+        "name_en": "Tar Tortilla",
+        "name_sq": "Tar Tortilla",
+        "description_en": "Schnitzel, garlic sauce, tomato, red cabbage, white cabbage, carrot",
+        "description_sq": "Schnitzel, sos garlic, domate, lakër e kuqe, lakër e bardhë, karrotë",
+        "price": "450",
+        "imagePath": "/images/tar-tortilla.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Bowls",
+    "category_sq": "Bowls",
+    "items": [
+      {
+        "name_en": "Aspasia Bowl",
+        "name_sq": "Aspasia Bowl",
+        "description_en": "Pita, schnitzel, garlic sauce, fries, red cabbage, white cabbage, carrot",
+        "description_sq": "Pite, schnitzel, sos garlic, patate, lakër e kuqe, lakër e bardhë, karrotë",
+        "price": "480 ALL",
+        "imagePath": "/images/aspasia-bowl.png"
+      },
+      {
+        "name_en": "Eze Bowl",
+        "name_sq": "Eze Bowl",
+        "description_en": "Pita, beef patty, fries, sauce, olives, Pico de Gallo salad, hot peppers, Arabian dates, pickled cucumber",
+        "description_sq": "Pite, qofte viçi, patate, sos, ullinj, sallatë Pico de Gallo, speca djegës, hurma arabie, kastravec turshi",
+        "price": "550 ALL",
+        "imagePath": "/images/eze-bowl.png"
+      },
+      {
+        "name_en": "Orsai Bowl",
+        "name_sq": "Orsai Bowl",
+        "description_en": "Pita, 2 pork shish kebabs/pork gyro, Greek salad, tzatziki, fries",
+        "description_sq": "Pite, 2 shishqebap gici/gjiro gici, sallatë greke, xaxiq, patate",
+        "price": "490 ALL",
+        "imagePath": "/images/orsai-bowl.png"
+      },
+      {
+        "name_en": "Surah Bowl",
+        "name_sq": "Surah Bowl",
+        "description_en": "Pita, 2 chicken shish kebabs/chicken gyro, iceberg lettuce, cherry tomatoes, spring onions, cucumber, olives, sauce, fries",
+        "description_sq": "Pite, 2 shishqebap pule/gjiro pule, iceberg, pomodorini, qepë të njoma, kastravec, ullinj, sos, patate",
+        "price": "490 ALL",
+        "imagePath": "/images/surah-bowl.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Open Pitas",
+    "category_sq": "Pita të Hapura",
+    "items": [
+      {
+        "name_en": "Open Chicken Fillet",
+        "name_sq": "Open Chicken Fillet",
+        "description_en": "Pita, grilled chicken fillet, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
+        "description_sq": "Pite, fileto pule e pjekur në skarë, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
+        "price": "600",
+        "imagePath": "/images/open-chicken-fillet.png"
+      },
+      {
+        "name_en": "Open Chicken Gyros",
+        "name_sq": "Open Chicken Gyros",
+        "description_en": "Pita, chicken gyro, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
+        "description_sq": "Pite, gjiro pule, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
+        "price": "550",
+        "imagePath": "/images/open-chicken-gyros.png"
+      },
+      {
+        "name_en": "Open Pork Gyros",
+        "name_sq": "Open Pork Gyros",
+        "description_en": "Pita, pork gyro, Greek salad, fries, tzatziki",
+        "description_sq": "Pite, gjiro gici, sallatë greke, patate, tzatziki",
+        "price": "580",
+        "imagePath": "/images/open-pork-gyros.png"
+      },
+      {
+        "name_en": "Calf Kebab",
+        "name_sq": "Kebab viçi",
+        "description_en": "Pita, 3 beef kebabs, Greek salad, fries, tzatziki",
+        "description_sq": "Pite, 3 kebabë viçi, sallatë greke, patate, tzatziki",
+        "price": "650",
+        "imagePath": "/images/calf-kebab.png"
+      },
+      {
+        "name_en": "Open Chicken Kebab",
+        "name_sq": "Open Chicken Kebab",
+        "description_en": "Pita, 3 chicken shish kebabs, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
+        "description_sq": "Pite, 3 shishqebap pule, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
+        "price": "590",
+        "imagePath": "/images/open-chicken-kebab.png"
+      },
+      {
+        "name_en": "Open Piglet Kebab",
+        "name_sq": "Open Piglet Kebab",
+        "description_en": "Pita, 3 pork shish kebabs, Greek salad, fries, tzatziki",
+        "description_sq": "Pite, 3 shishqebap gici, sallatë greke, patate, tzatziki",
+        "price": "600",
+        "imagePath": "/images/open-piglet-kebab.png"
+      },
+      {
+        "name_en": "Chicken Kebab",
+        "name_sq": "Chicken Kebab",
+        "description_en": "Pita, 3 chicken kebabs, iceberg lettuce, tomato, cucumber, marinated olives, fries, sauce",
+        "description_sq": "Pite, 3 kebabë pule, sallatë iceberg, domate, kastravec, ullinj (të marinuar), patate, sos",
+        "price": "",
+        "imagePath": "/images/chicken-kebab.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Grill",
+    "category_sq": "Zgarë",
+    "items": [
+      {
+        "name_en": "Pork Chop",
+        "name_sq": "Bërxollë Gici",
+        "description_en": "500g",
+        "description_sq": "500gr",
+        "price": "750 ALL",
+        "imagePath": "/images/pork-chop.png"
+      },
+      {
+        "name_en": "Lamb Chop",
+        "name_sq": "Bërxollë Qingji",
+        "description_en": "500g",
+        "description_sq": "500gr",
+        "price": "1300 ALL",
+        "imagePath": "/images/lamb-chop.png"
+      },
+      {
+        "name_en": "Lamb Ribs",
+        "name_sq": "Brinjë Qingji",
+        "description_en": "500g",
+        "description_sq": "500gr",
+        "price": "1300 ALL",
+        "imagePath": "/images/lamb-ribs.png"
+      },
+      {
+        "name_en": "Chicken Fillet",
+        "name_sq": "Fileto Pule",
+        "description_en": "500g",
+        "description_sq": "500gr",
+        "price": "600 ALL",
+        "imagePath": "/images/chicken-fillet.png"
+      },
+      {
+        "name_en": "Chicken Wings",
+        "name_sq": "Krahë Pule",
+        "description_en": "500g",
+        "description_sq": "500gr",
+        "price": "650 ALL",
+        "imagePath": "/images/chicken-wings.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Burgers",
+    "category_sq": "Burgerë",
+    "items": [
+      {
+        "name_en": "Dalan Burger",
+        "name_sq": "Dalan Burger",
+        "description_en": "Burger bun, schnitzel, sauce, red cabbage, white cabbage, carrot, onion, coriander, iceberg, bacon",
+        "description_sq": "Bukë Burgeri, schnitzel, sos, lakër e kuqe, lakër e bardhë, karrotë, qepë, koriander, iceberg, bacon",
+        "price": "550",
+        "imagePath": "/images/dalan-burger.png"
+      },
+      {
+        "name_en": "Orfeus Burger",
+        "name_sq": "Orfeus Burger",
+        "description_en": "Burger bun, chicken patty, burger sauce, marinated arugula, cheddar cheese, cucumber",
+        "description_sq": "Bukë Burgeri, qofte pule, sos burger, rukola të marinuara, djathë cheddar, kastravec",
+        "price": "470",
+        "imagePath": "/images/orfeus-burger.png"
+      },
+      {
+        "name_en": "Trajan Burger",
+        "name_sq": "Trajan Burger",
+        "description_en": "Burger bun, beef patty, tomato, lettuce, pickled cucumber, burger sauce, cheddar cheese",
+        "description_sq": "Bukë Burgeri, qofte viçi, domate, sallatë, kastravec turshi, sos burger, djathë cheddar",
+        "price": "430",
+        "imagePath": "/images/trajan-burger.png"
+      },
+      {
+        "name_en": "Zahaa Burger",
+        "name_sq": "Zahaa Burger",
+        "description_en": "Burger bun, beef patty, special burger sauce, tomato, avocado, baby spinach, mint",
+        "description_sq": "Bukë Burgeri, qofte viçi, sos i veçantë burgeri, domate, avocado, spinaq baby, mente",
+        "price": "570",
+        "imagePath": "/images/zahaa-burger.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Hotdogs",
+    "category_sq": "Hotdogs",
+    "items": [
+      {
+        "name_en": "Daza Hotdog",
+        "name_sq": "Daza Hotdog",
+        "description_en": "BBQ sauce, sausage, iceberg lettuce, pickled cucumber, spring onions, bacon",
+        "description_sq": "Salcë BBQ, salçiçe, iceberg, kastravec turshi, qepë të njoma, bacon",
+        "price": "350 ALL",
+        "imagePath": "/images/daza-hotdog.png"
+      },
+      {
+        "name_en": "Ragnar Hotdog",
+        "name_sq": "Ragnar Hotdog",
+        "description_en": "BBQ sauce, sausage, pickled cucumber, caramelized onion, cheddar cheese",
+        "description_sq": "Salcë BBQ, salçiçe, kastravec turshi, qepë e karamelizuar, djath cheddar",
+        "price": "330 ALL",
+        "imagePath": "/images/ragnar-hotdog.png"
+      },
+      {
+        "name_en": "Soho Hotdog",
+        "name_sq": "Soho Hotdog",
+        "description_en": "Guacamole sauce, sausage, Pico De Gallo salad, spring onions",
+        "description_sq": "Salcë guacamola, salçiçe, sallatë Pico De Gallo, qepë të njoma",
+        "price": "330 ALL",
+        "imagePath": "/images/soho-hotdog.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Sandwiches",
+    "category_sq": "Sanduiçe",
+    "items": [
+      {
+        "name_en": "Agona",
+        "name_sq": "Agona",
+        "description_en": "Baguette bread, butter, chicken fillet, hummus, cherry tomatoes, cumin seeds, iceberg, cucumber, red pepper, spring onions, marinated baby spinach, basil",
+        "description_sq": "Bukë Baguette, gjalp, fileto pule, humus, pomodorini, fara kimino, iceberg, kastravec, piper i kuq, qepë të njoma, spinaq baby i marinuar, borzilok",
+        "price": "450",
+        "imagePath": "/images/agona.png"
+      },
+      {
+        "name_en": "Ego",
+        "name_sq": "Ego",
+        "description_en": "Ciabatta bread, pork fillet, sauce, roasted peppers, red onion, feta cheese, marinated rucola, coriander, bacon, chili pepper (optional)",
+        "description_sq": "Bukë Ciabatta, fileto derri, sos, spec të pjekur, qepë të kuqe, djathë feta, rucola e marinuar, koriandër, bacon, spec djegës (opsionale)",
+        "price": "450",
+        "imagePath": "/images/ego.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Special Pitas",
+    "category_sq": "Pita Speciale",
+    "items": [
+      {
+        "name_en": "Athos Greek Pita",
+        "name_sq": "Athos Greek Pita",
+        "description_en": "Pork meat/beef patty, tomato, green pepper, cheddar cheese, mozzarella, capers, tirokafteri",
+        "description_sq": "Mish derri/qofte viçi, domate, spec jeshil, djathë cheddar, mozzarella, kaperi, tirokafteri",
+        "price": "490",
+        "imagePath": "/images/athos-greek-pita.png"
+      },
+      {
+        "name_en": "Eze Beef Pita",
+        "name_sq": "Eze Beef Pita",
+        "description_en": "Beef patty, sauce, Pico De Gallo salad, cheddar cheese, olives, hot peppers, pickled cucumber, Arabian dates",
+        "description_sq": "Qofte viçi, sos, sallatë Pico De Gallo, djathë cheddar, ullinj, speca djegës, kastravec turshi, hurma arabie",
+        "price": "480",
+        "imagePath": "/images/eze-beef-pita.png"
+      },
+      {
+        "name_en": "Arab Pita",
+        "name_sq": "Arab Pita",
+        "description_en": "Marinated chicken fillet, sauce, red cabbage, white cabbage, carrot, onion, cheddar cheese, tomato, capers",
+        "description_sq": "Fileto pule e marinuar, sos, lakër e kuqe, lakër e bardhë, karrotë, qepë, djathë cheddar, domate, kaper",
+        "price": "400",
+        "imagePath": "/images/arab-pita.png"
+      },
+      {
+        "name_en": "Quesadilla",
+        "name_sq": "Quesadilla",
+        "description_en": "Marinated chicken fillet, hummus, roasted peppers, feta cheese, cheddar cheese, pine nuts, olives, coriander, tomato, chili",
+        "description_sq": "Fileto pule e marinuar, humus, speca të pjekur, djathë feta, djathë cheddar, fara pishe, ullinj, koriander, domate, chilli",
+        "price": "470",
+        "imagePath": "/images/quesadilla.png"
+      },
+      {
+        "name_en": "Pork Skepasti",
+        "name_sq": "Skepasti Derri",
+        "description_en": "Pork fillet/pork gyro, tzatziki/tirokafteri, Pico De Gallo salad, green pepper, cheddar cheese, mozzarella, capers",
+        "description_sq": "Fileto derri/gjiro derri, xaxiq/tirokafteri, sallatë Pico De Gallo, spec jeshil, djathë cheddar, mozzarella, kaperi",
+        "price": "490",
+        "imagePath": "/images/pork-skepasti.png"
+      },
+      {
+        "name_en": "Chicken Skepasti",
+        "name_sq": "Skepasti Pule",
+        "description_en": "Chicken fillet/chicken gyro, sauce, tomato, mozzarella, cheddar cheese, green pepper, capers",
+        "description_sq": "Fileto pule/gjiro pule, sos, domate, mozzarella, djathë cheddar, spec jeshil, kaperi",
+        "price": "470",
+        "imagePath": "/images/chicken-skepasti.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Salads",
+    "category_sq": "Sallata",
+    "items": [
+      {
+        "name_en": "Arugula Salad",
+        "name_sq": "Sallatë Rukola",
+        "description_en": "Rucola salad, cherry tomatoes, parmigiano cheese, parsley, mint, avocado, lemon juice, toasted pine nuts, olive oil, pomegranate, balsamic vinegar, pepper",
+        "description_sq": "Sallatë rucola, pomodorini, djathë parmigiano, majdanoz, mente, avocado, lëng limoni, fara pishe të pjekura, vaj ulliri, shegë, aceto balsamico, piper",
+        "price": "500",
+        "imagePath": "/images/arugula-salad.png"
+      },
+      {
+        "name_en": "Caesar Salad",
+        "name_sq": "Sallatë Caesar",
+        "description_en": "Iceberg lettuce, grilled chicken fillet, cherry tomatoes, sauce, corn, marinated croutons, parmigiano cheese",
+        "description_sq": "Sallatë iceberg, fileto pule skarrë, pomodorini, sos, misër, bukë e thekur e marinuar, djathë parmigiano",
+        "price": "490",
+        "imagePath": "/images/caesar-salad.png"
+      },
+      {
+        "name_en": "Greek Salad",
+        "name_sq": "Sallatë Greke",
+        "description_en": "Tomato, cucumber, green pepper, red onion, olives, feta cheese, capers, oregano, olive oil, mint",
+        "description_sq": "Domate, kastravec, spec jeshil, qepë të kuqe, ullinj, djathë feta, kaperi, rigon, vaj ulliri, mente",
+        "price": "450",
+        "imagePath": "/images/greek-salad.png"
+      },
+      {
+        "name_en": "Spinach Salad",
+        "name_sq": "Sallatë Spinaq",
+        "description_en": "Spinach, sun-dried tomatoes, cucumber, mint, parmigiano cheese, pine nuts, olive oil, balsamic vinegar",
+        "description_sq": "Spinaq, domate të thara, kastravec, mente, djathë parmigiano, fara pishe, vaj ulliri, aceto balsamico",
+        "price": "450",
+        "imagePath": "/images/spinach-salad.png"
+      }
+    ]
+  },
+  {
+    "category_en": "Sides",
+    "category_sq": "Pjata Anësore",
+    "items": [
+      {
+        "name_en": "Chicken Tenders",
+        "name_sq": "Chicken Tenders",
+        "description_en": "x8 fried chicken tenders",
+        "description_sq": "x8 copë pule të skuqura",
+        "price": "550",
+        "imagePath": "/images/chicken-tenders.png"
+      },
+      {
+        "name_en": "Fries with Pork",
+        "name_sq": "Fries with Pork",
+        "description_en": "Fries with pork",
+        "description_sq": "Patate të skuqura me mish derri",
+        "price": "500",
+        "imagePath": "/images/fries-with-pork.png"
+      },
+      {
+        "name_en": "Meatballs",
+        "name_sq": "Qofte",
+        "description_en": "x8 beef or chicken meatballs",
+        "description_sq": "x8 Qofte viçi ose pule",
+        "price": "350",
+        "imagePath": "/images/meatballs.png"
+      },
+      {
+        "name_en": "Mozzarella Sticks",
+        "name_sq": "Mozzarella Sticks",
+        "description_en": "x5 mozzarella sticks",
+        "description_sq": "x5 shkopinj mozzarella",
+        "price": "340",
+        "imagePath": "/images/mozzarella-sticks.png"
+      },
+      {
+        "name_en": "Onion Rings & Sauce",
+        "name_sq": "Onion Rings & Sauce",
+        "description_en": "x8 onion rings with sauce",
+        "description_sq": "x8 unaza qepësh me salcë",
+        "price": "250",
+        "imagePath": "/images/onion-rings-&-sauce.png"
+      }
+    ]
+  }
+
+]

@@ -40,12 +40,15 @@ router.get('/lang/:locale', (req, res) => {
     // Expires in 30 days (for example)
     res.cookie('lang', locale, { maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true });
 
-    // Optionally, you can log or debug
-    console.log(`Language switched to: ${locale}`);
+    // log & debug
+    // console.log(`Language switched to: ${locale}`);
   }
 
   // Redirect back to where the user came from, or to home if none
-  res.redirect('back');
+  // res.redirect('back'); //old express gives warning
+  const referer = req.get('Referer') || '/';
+  res.redirect(referer);
+
 });
 
 

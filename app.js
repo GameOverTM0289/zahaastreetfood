@@ -6,6 +6,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const i18n = require('./config/i18n'); // Your i18n config
+const { forceAlbanianDefault } = require('./middlewares/language');
+
 
 const app = express();
 
@@ -15,6 +17,8 @@ const app = express();
  */
 app.use(cookieParser());
 app.use(i18n.init);
+app.use(forceAlbanianDefault);
+
 
 /**
  * 2) Set up EJS as the view engine
@@ -33,28 +37,28 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-/**
- * 5) Manual Language Switch Route
- *    - Visiting /lang/en or /lang/sq sets the cookie and locale
- */
-app.get('/lang/:locale', (req, res) => {
-  const { locale } = req.params;
+// /**
+//  * 5) Manual Language Switch Route
+//  *    - Visiting /lang/en or /lang/sq sets the cookie and locale
+//  */
+// app.get('/lang/:locale', (req, res) => {
+//   const { locale } = 'sq';
 
-  // Only allow 'en' or 'sq'
-  if (['en', 'sq'].includes(locale)) {
-    // Set the locale for this request
-    req.setLocale(locale);
+//   // Only allow 'en' or 'sq'
+//   if (['en', 'sq'].includes(locale)) {
+//     // Set the locale for this request
+//     req.setLocale(locale);
 
-    // Also store in a cookie so future requests use it
-    // Example: 30 days expiry
-    res.cookie('lang', locale, { maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true });
+//     // Also store in a cookie so future requests use it
+//     // Example: 30 days expiry
+//     res.cookie('lang', locale, { maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true });
 
-    console.log(`Language switched to: ${locale}`);
-  }
+//     console.log(`Language switched to: ${locale}`);
+//   }
 
-  // Redirect back to the previous page or home if no referrer
-  res.redirect('back');
-});
+//   // Redirect back to the previous page or home if no referrer
+//   res.redirect('back');
+// });
 
 /**
  * 6) Import and use your main routes
