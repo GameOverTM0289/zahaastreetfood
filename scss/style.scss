@@ -1,6 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/************************************************************
+ * style.scss
+ * Master file importing all partials
+ ************************************************************/
+
+/* 1) BASE */
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/reset';
+
+/* 2) LAYOUT */
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/footer';
+
+/* 3) COMPONENTS */
+@import 'components/buttons';
+@import 'components/cards';
+
+/* 4) PAGES */
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/menu';
+
+
 body {
+
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -60,7 +89,7 @@ body {
  *******************************************************/
 
 .site-header {
-    background-color: #abb6b6;     // Tasty, modern background
+    background-color: #D6E3E4;     // Tasty, modern background
     display: flex;
     align-items: center;
     justify-content: space-between;

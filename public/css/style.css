@@ -1,6 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/************************************************************
+ * style.scss
+ * Master file importing all partials
+ ************************************************************/
+/* 1) BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) LAYOUT */
+/*************************************************************
+ * HEADER/ NAVIGATION SCSS
+ * Using Montserrat font, background #D6E3E4, white text (#FFF)
+ *************************************************************/
+/* If not imported globally, you can import the font here: */
+.site-header {
+  background-color: #D6E3E4; /* Tasty background */
+  font-family: "Montserrat", sans-serif;
+  /* Logo link on the left */
+  /* The nav container on the right */
+}
+.site-header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.site-header .site-logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.site-header .site-logo-link .site-logo {
+  height: 50px;
+  width: auto;
+}
+.site-header .site-nav .nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+.site-header .site-nav .nav-list .nav-item {
+  /* Language switch container */
+}
+.site-header .site-nav .nav-list .nav-item .nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.site-header .site-nav .nav-list .nav-item .nav-link:hover {
+  color: #333; /* highlight on hover */
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch {
+  position: relative;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown {
+  position: relative;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFFFFF;
+  transition: border-top-color 0.3s ease;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button:hover {
+  background-color: #FFFFFF;
+  color: #D6E3E4;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button:hover .arrow-down {
+  border-top-color: #D6E3E4;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content {
+  display: none; /* hidden by default, toggled via JS */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #D6E3E4;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 10;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content a:hover {
+  background-color: #FFFFFF;
+  color: #D6E3E4;
+}
+
+/* Optional styling for <hr> after the header */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+/* 3) COMPONENTS */
+/* 4) PAGES */
+/*************************************************************
+ * MENU PAGE SCSS
+ * For .menu-page, .menu-category, .menu-item, etc.
+ *************************************************************/
+/* If not imported globally, you can import the font here: */
+.menu-page {
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem;
+}
+.menu-page__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+.menu-page__no-items {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+.menu-page__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Category container */
+.menu-category {
+  role: region; /* for semantic HTML usage in EJS if you want */
+}
+.menu-category__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.menu-category__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual menu item */
+.menu-item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Image wrapper (figure) */
+}
+.menu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.menu-item__image-wrapper {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.menu-item__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.menu-item__name {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+.menu-item__description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.menu-item__price {
+  font-weight: 700;
+  color: #000;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu-page__title {
@@ -52,7 +264,7 @@ body {
 * Text color: #FFFFFF
 *******************************************************/
 .site-header {
-  background-color: #abb6b6;
+  background-color: #D6E3E4;
   display: flex;
   align-items: center;
   justify-content: space-between;

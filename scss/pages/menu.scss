@@ -1,0 +1,94 @@
+/*************************************************************
+ * MENU PAGE SCSS
+ * For .menu-page, .menu-category, .menu-item, etc.
+ *************************************************************/
+
+/* If not imported globally, you can import the font here: */
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.menu-page {
+  font-family: 'Montserrat', sans-serif;
+  padding: 2rem;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+
+  &__no-items {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Category container */
+.menu-category {
+  role: region; /* for semantic HTML usage in EJS if you want */
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Individual menu item */
+.menu-item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  /* Image wrapper (figure) */
+  &__image-wrapper {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #333;
+    font-size: 1.1rem;
+  }
+
+  &__description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    font-weight: 700;
+    color: #000;
+  }
+}

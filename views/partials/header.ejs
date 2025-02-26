@@ -13,30 +13,54 @@
 <body>
 
 <header class="site-header" role="banner">
-  <nav class="site-nav" role="navigation" aria-label="Main Navigation">
-    <ul class="nav-list">
-      <p class="site-logo">ZAHAA</p>
-      <li class="nav-item">
-        <a class="nav-link" href="/"><%= __('NAV_HOME') %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/menu"><%= __('NAV_MENU') %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about"><%= __('NAV_ABOUT') %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact"><%= __('NAV_CONTACT') %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/gallery"><%= __('NAV_GALLERY') %></a>
-      </li>
-      <!-- Language Switch Links -->
-      <li class="nav-item nav-lang-switch">
-        <a href="/lang/sq">Shqip</a> | <a href="/lang/en">English</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="header-container">
+    <!-- Logo on the far left -->
+    <!-- Example: link to home with an image or text logo -->
+    <a href="/" class="site-logo-link">
+      <img src="/images/logo.png" alt="ZAHAA Logo" class="site-logo" />
+    </a>
+
+    <!-- Nav on the far right -->
+    <nav class="site-nav" role="navigation" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><%= __('NAV_HOME') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/menu"><%= __('NAV_MENU') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about"><%= __('NAV_ABOUT') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact"><%= __('NAV_CONTACT') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gallery"><%= __('NAV_GALLERY') %></a>
+        </li>
+
+        <!-- Language Switch as a fancy minimalistic dropdown -->
+        <li class="nav-item nav-lang-switch">
+          <div class="lang-dropdown">
+            <!-- The button shows currently selected language + arrow -->
+            <button class="lang-dropdown__button" id="langDropdownBtn">
+              <!-- Show "Shqip" if locale == sq, otherwise "English" -->
+              <%= (locale === 'sq') ? 'Shqip' : 'English' %>
+              <span class="arrow-down"></span>
+            </button>
+
+            <!-- The hidden dropdown content (appears on click) -->
+            <div class="lang-dropdown__content" id="langDropdownContent">
+              <a href="/lang/sq">Shqip</a>
+              <a href="/lang/en">English</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <hr>
+<!-- The rest of your page content or an EJS include for main content -->
+<!-- (Don't forget to include a closing </body></html> in your footer or layout) -->

@@ -1,0 +1,135 @@
+/*************************************************************
+ * HEADER/ NAVIGATION SCSS
+ * Using Montserrat font, background #D6E3E4, white text (#FFF)
+ *************************************************************/
+
+/* If not imported globally, you can import the font here: */
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.site-header {
+    background-color: #D6E3E4;  /* Tasty background */
+    font-family: 'Montserrat', sans-serif;
+  
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+  
+    /* Logo link on the left */
+    .site-logo-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+  
+      .site-logo {
+        height: 50px;
+        width: auto;
+      }
+    }
+  
+    /* The nav container on the right */
+    .site-nav {
+      .nav-list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1.5rem;
+  
+        .nav-item {
+          .nav-link {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+  
+            &:hover {
+              color: #333; /* highlight on hover */
+            }
+          }
+  
+          /* Language switch container */
+          &.nav-lang-switch {
+            position: relative;
+  
+            .lang-dropdown {
+              position: relative;
+              
+              &__button {
+                background-color: transparent;
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+                padding: 0.4rem 0.8rem;
+                border-radius: 4px;
+                font-family: inherit;
+                font-size: 0.9rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                transition: background-color 0.3s ease, color 0.3s ease;
+  
+                .arrow-down {
+                  width: 0;
+                  height: 0;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+                  border-top: 5px solid #FFFFFF;
+                  transition: border-top-color 0.3s ease;
+                }
+  
+                &:hover {
+                  background-color: #FFFFFF;
+                  color: #D6E3E4;
+  
+                  .arrow-down {
+                    border-top-color: #D6E3E4;
+                  }
+                }
+              }
+  
+              &__content {
+                display: none; /* hidden by default, toggled via JS */
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: #D6E3E4;
+                min-width: 120px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                border-radius: 4px;
+                overflow: hidden;
+                z-index: 10;
+  
+                a {
+                  display: block;
+                  padding: 0.5rem 1rem;
+                  color: #FFFFFF;
+                  text-decoration: none;
+                  font-size: 0.9rem;
+                  transition: background-color 0.3s ease;
+  
+                  &:hover {
+                    background-color: #FFFFFF;
+                    color: #D6E3E4;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Optional styling for <hr> after the header */
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0;
+  }
+  
