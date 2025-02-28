@@ -1,0 +1,493 @@
+/*************************************************************
+ * HOME.SCSS (Revised for Full-Width Hero Image)
+ * Main color: #9CBBBC
+ * 
+ * 1) Hero section covers entire width/height.
+ *    A dark overlay is used to darken the image for better 
+ *    text readability. The text is centered on top.
+ * 
+ * 2) The rest of the sections (tagline, best pick, etc.) 
+ *    remain similar to the previous design, using #9CBBBC 
+ *    for buttons/highlights.
+ *************************************************************/
+
+/* If not imported globally, you can import Montserrat here:
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
+
+.home-page {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f9f9f9; optional body color */
+}
+
+/* 1) Hero Section (Full-Width Image) */
+.hero-section {
+  position: relative;
+  height: 95vh;
+  background: url("/images/hero.jpeg") no-repeat center 0.1rem;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Dark overlay for better text contrast */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.61); /* darken the hero image */
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2; /* above the overlay */
+    max-width: 700px;
+    margin: 0 1rem;
+    color: #fff;
+
+    #hero-headline {
+      font-size: 4.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      margin-top: -4rem;
+      line-height: 1;
+    }
+
+    .hero-subheadline {
+      font-size: 1.6rem;
+      margin-bottom: 2.8rem;
+      letter-spacing: 1.2px;
+    }
+
+    .hero-supporting-text {
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.partner-section {
+  padding: 1.8rem 0 1.8rem 0;
+  background-color: #dfdfdf;
+}
+
+.heading-featured-in {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logos img {
+  height: 2.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/* 2) Tagline & Neon Quotes */
+.tagline-section {
+  padding: 2rem 8em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 4rem;
+  border-bottom: 1px solid #9cbbbc;
+
+  .tagline-content {
+    width: 70%;
+  }
+
+  .tagline-quote {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #444;
+    margin: 2rem auto;
+    text-align: left;
+  }
+
+  .tagline-supporting-text {
+    font-size: 1.2rem;
+    color: #474747;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .neon-image {
+    margin: 1rem auto;
+    max-width: 600px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border: 8px solid #9cbbbc;
+      border-radius: 36px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      opacity: 90%;
+      transition: all ease 0.2s;
+    }
+
+    img:hover {
+      transform: scale(95%);
+    }
+  }
+}
+
+/* 3) Best Pick – Our Suflaki */
+.best-pick {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .best-pick-image {
+    margin: 0 auto;
+    max-width: 600px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* 4) Tasty & Fresh */
+.tasty-fresh {
+  padding: 2.5rem 1rem;
+  background-color: #fff;
+  text-align: center;
+
+  #tasty-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .fresh-highlights {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    li {
+      width: 320px;
+      background-color: #9cbbbc;
+      color: #333;
+      padding: 1rem 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #88a5a6;
+      }
+    }
+  }
+
+  .tasty-pics {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .fresh-image {
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* 5) About Teaser */
+.about-teaser {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+
+  #about-teaser-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .about-button {
+    display: inline-block;
+    background-color: #9cbbbc;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #88a5a6;
+      transform: translateY(-2px);
+    }
+  }
+
+  .about-image {
+    margin: 2rem auto 0 auto;
+    max-width: 600px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* 6) Featured Menu Items */
+.featured-menu {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #fff;
+
+  #featured-menu-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .featured-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+
+    .featured-item {
+      background-color: #fefefe;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .featured-menu-note {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #9cbbbc;
+    color: #333;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #88a5a6;
+      transform: translateY(-2px);
+    }
+  }
+
+  .featured-image {
+    margin: 2rem auto 0 auto;
+    max-width: 600px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* 7) Location & Opening Hours */
+.location-hours {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+
+  #location-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .restaurant-address {
+    font-style: normal;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #444;
+  }
+
+  .opening-hours {
+    margin-bottom: 2rem;
+    p {
+      margin: 0.3rem 0;
+      color: #444;
+    }
+  }
+
+  .contact-button {
+    display: inline-block;
+    background-color: #9cbbbc;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #88a5a6;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* 8) Delivery Partners */
+.delivery-partners {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #fff;
+
+  #delivery-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .delivery-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+
+    img {
+      width: 120px;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .delivery-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .delivery-button {
+      display: inline-block;
+      background-color: #9cbbbc;
+      color: #333;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: #88a5a6;
+        transform: translateY(-2px);
+      }
+
+      &.wolt {
+        /* optional specific style for Wolt button */
+      }
+
+      &.baboon {
+        /* optional specific style for Baboon button */
+      }
+    }
+  }
+}

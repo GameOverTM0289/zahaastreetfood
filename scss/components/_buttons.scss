@@ -1,0 +1,34 @@
+.hero-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+      
+      &:hover {
+          background-color: #88A5A6; /* slightly darker or lighter shade */
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+    .cta-button--primary {
+        font-weight: 600;
+        background-color: #9CBBBC; /* main color */
+        color: #2c2c2c;
+    }
+    .cta-button--secondary {
+        font-weight: 400;
+        background-color: #9cbbbc3f; /* main color */
+        color: #dfdfdf;
+        border: 1px solid #9CBBBC;
+    }
+  }

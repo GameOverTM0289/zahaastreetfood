@@ -1,13 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@charset "UTF-8";
 /************************************************************
- * style.scss
- * Master file importing all partials
- ************************************************************/
+* style.scss
+* Master file importing all partials
+************************************************************/
 /* 1) BASE */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 /* 2) LAYOUT */
@@ -17,7 +25,17 @@
  *************************************************************/
 /* If not imported globally, you can import the font here: */
 .site-header {
-  background-color: #D6E3E4; /* Tasty background */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  background-color: #9CBBBC; /* Tasty background */
   font-family: "Montserrat", sans-serif;
   /* Logo link on the left */
   /* The nav container on the right */
@@ -26,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 6rem;
 }
 .site-header .site-logo-link {
   text-decoration: none;
@@ -34,8 +52,14 @@
   align-items: center;
 }
 .site-header .site-logo-link .site-logo {
+  cursor: default;
+  user-select: none;
   height: 50px;
   width: auto;
+  transition: all ease-in 0.1s;
+}
+.site-header .site-logo-link .site-logo:hover {
+  opacity: 0.7;
 }
 .site-header .site-nav .nav-list {
   display: flex;
@@ -57,7 +81,7 @@
   transition: color 0.3s ease;
 }
 .site-header .site-nav .nav-list .nav-item .nav-link:hover {
-  color: #333; /* highlight on hover */
+  color: #615e5e; /* highlight on hover */
 }
 .site-header .site-nav .nav-list .nav-item.nav-lang-switch {
   position: relative;
@@ -88,8 +112,8 @@
   transition: border-top-color 0.3s ease;
 }
 .site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button:hover {
-  background-color: #FFFFFF;
-  color: #D6E3E4;
+  background-color: rgba(156, 187, 188, 0.3843137255);
+  color: #f3f3f3;
 }
 .site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button:hover .arrow-down {
   border-top-color: #D6E3E4;
@@ -99,9 +123,9 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #D6E3E4;
+  background-color: #fff;
   min-width: 120px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(14, 13, 13, 0.1);
   border-radius: 4px;
   overflow: hidden;
   z-index: 10;
@@ -109,14 +133,14 @@
 .site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content a {
   display: block;
   padding: 0.5rem 1rem;
-  color: #FFFFFF;
+  color: #202020;
   text-decoration: none;
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
 }
 .site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content a:hover {
   background-color: #FFFFFF;
-  color: #D6E3E4;
+  color: #a9b5b6;
 }
 
 /* Optional styling for <hr> after the header */
@@ -127,7 +151,472 @@ hr {
 }
 
 /* 3) COMPONENTS */
+.hero-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.hero-cta-buttons .cta-button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+}
+.hero-cta-buttons .cta-button:hover {
+  background-color: #88A5A6; /* slightly darker or lighter shade */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.hero-cta-buttons .cta-button--primary {
+  font-weight: 600;
+  background-color: #9CBBBC; /* main color */
+  color: #2c2c2c;
+}
+.hero-cta-buttons .cta-button--secondary {
+  font-weight: 400;
+  background-color: rgba(156, 187, 188, 0.2470588235); /* main color */
+  color: #dfdfdf;
+  border: 1px solid #9CBBBC;
+}
+
 /* 4) PAGES */
+/*************************************************************
+ * HOME.SCSS (Revised for Full-Width Hero Image)
+ * Main color: #9CBBBC
+ * 
+ * 1) Hero section covers entire width/height.
+ *    A dark overlay is used to darken the image for better 
+ *    text readability. The text is centered on top.
+ * 
+ * 2) The rest of the sections (tagline, best pick, etc.) 
+ *    remain similar to the previous design, using #9CBBBC 
+ *    for buttons/highlights.
+ *************************************************************/
+/* If not imported globally, you can import Montserrat here:
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
+.home-page {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f9f9f9; optional body color */
+}
+
+/* 1) Hero Section (Full-Width Image) */
+.hero-section {
+  position: relative;
+  height: 95vh;
+  background: url("/images/hero.jpeg") no-repeat center 0.1rem;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Dark overlay for better text contrast */
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61); /* darken the hero image */
+  z-index: 1;
+}
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2; /* above the overlay */
+  max-width: 700px;
+  margin: 0 1rem;
+  color: #fff;
+}
+.hero-section .hero-content #hero-headline {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  margin-top: -4rem;
+  line-height: 1;
+}
+.hero-section .hero-content .hero-subheadline {
+  font-size: 1.6rem;
+  margin-bottom: 2.8rem;
+  letter-spacing: 1.2px;
+}
+.hero-section .hero-content .hero-supporting-text {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.partner-section {
+  padding: 1.8rem 0 1.8rem 0;
+  background-color: #dfdfdf;
+}
+
+.heading-featured-in {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logos img {
+  height: 2.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/* 2) Tagline & Neon Quotes */
+.tagline-section {
+  padding: 2rem 8em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 4rem;
+  border-bottom: 1px solid #9cbbbc;
+}
+.tagline-section .tagline-content {
+  width: 70%;
+}
+.tagline-section .tagline-quote {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #444;
+  margin: 2rem auto;
+  text-align: left;
+}
+.tagline-section .tagline-supporting-text {
+  font-size: 1.2rem;
+  color: #474747;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.tagline-section .neon-image {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+.tagline-section .neon-image img {
+  width: 100%;
+  height: auto;
+  border: 8px solid #9cbbbc;
+  border-radius: 36px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 90%;
+  transition: all ease 0.2s;
+}
+.tagline-section .neon-image img:hover {
+  transform: scale(95%);
+}
+
+/* 3) Best Pick – Our Suflaki */
+.best-pick {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.best-pick h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.best-pick p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #555;
+}
+.best-pick .best-pick-image {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.best-pick .best-pick-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 4) Tasty & Fresh */
+.tasty-fresh {
+  padding: 2.5rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+.tasty-fresh #tasty-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.tasty-fresh p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #555;
+}
+.tasty-fresh .fresh-highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.tasty-fresh .fresh-highlights li {
+  width: 320px;
+  background-color: #9cbbbc;
+  color: #333;
+  padding: 1rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.tasty-fresh .fresh-highlights li:hover {
+  background-color: #88a5a6;
+}
+.tasty-fresh .fresh-image {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.tasty-fresh .fresh-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 5) About Teaser */
+.about-teaser {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.about-teaser #about-teaser-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.about-teaser p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #555;
+}
+.about-teaser .about-button {
+  display: inline-block;
+  background-color: #9cbbbc;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.about-teaser .about-button:hover {
+  background-color: #88a5a6;
+  transform: translateY(-2px);
+}
+.about-teaser .about-image {
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+}
+.about-teaser .about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 6) Featured Menu Items */
+.featured-menu {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+.featured-menu #featured-menu-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.featured-menu .featured-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+}
+.featured-menu .featured-items-grid .featured-item {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.featured-menu .featured-items-grid .featured-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.featured-menu .featured-items-grid .featured-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.featured-menu .featured-items-grid .featured-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+.featured-menu .featured-menu-note {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #444;
+  line-height: 1.6;
+}
+.featured-menu .cta-button {
+  display: inline-block;
+  background-color: #9cbbbc;
+  color: #333;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.featured-menu .cta-button:hover {
+  background-color: #88a5a6;
+  transform: translateY(-2px);
+}
+.featured-menu .featured-image {
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+}
+.featured-menu .featured-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 7) Location & Opening Hours */
+.location-hours {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.location-hours #location-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.location-hours p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.6;
+  color: #555;
+}
+.location-hours .restaurant-address {
+  font-style: normal;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+.location-hours .opening-hours {
+  margin-bottom: 2rem;
+}
+.location-hours .opening-hours p {
+  margin: 0.3rem 0;
+  color: #444;
+}
+.location-hours .contact-button {
+  display: inline-block;
+  background-color: #9cbbbc;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.location-hours .contact-button:hover {
+  background-color: #88a5a6;
+  transform: translateY(-2px);
+}
+
+/* 8) Delivery Partners */
+.delivery-partners {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+.delivery-partners #delivery-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.delivery-partners p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #555;
+}
+.delivery-partners .delivery-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.delivery-partners .delivery-logos img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.delivery-partners .delivery-logos img:hover {
+  transform: scale(1.05);
+}
+.delivery-partners .delivery-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.delivery-partners .delivery-buttons .delivery-button {
+  display: inline-block;
+  background-color: #9cbbbc;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.delivery-partners .delivery-buttons .delivery-button:hover {
+  background-color: #88a5a6;
+  transform: translateY(-2px);
+}
+.delivery-partners .delivery-buttons .delivery-button.wolt {
+  /* optional specific style for Wolt button */
+}
+.delivery-partners .delivery-buttons .delivery-button.baboon {
+  /* optional specific style for Baboon button */
+}
+
 /*************************************************************
  * MENU PAGE SCSS
  * For .menu-page, .menu-category, .menu-item, etc.
@@ -256,85 +745,6 @@ body {
 }
 .menu-item__price {
   font-weight: bold;
-}
-
-/*******************************************************
-* NAVIGATION STYLES
-* Background color: #D6E3E4
-* Text color: #FFFFFF
-*******************************************************/
-.site-header {
-  background-color: #D6E3E4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  height: 70px;
-}
-.site-header .site-logo {
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.site-header .site-logo:hover {
-  color: rgba(255, 255, 255, 0.8352941176);
-}
-.site-header .site-nav {
-  display: flex;
-  align-items: center;
-}
-.site-header .site-nav .nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.site-header .site-nav .nav-list .nav-item .nav-link {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 1rem;
-  position: relative;
-  transition: color 0.3s ease;
-}
-.site-header .site-nav .nav-list .nav-item .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8352941176);
-}
-.site-header .site-nav .nav-list .nav-item .nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #FFFFFF;
-  transition: width 0.3s ease;
-}
-.site-header .site-nav .nav-list .nav-item .nav-link:hover::after {
-  width: 100%;
-}
-.site-header .site-nav .nav-lang-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-left: 1rem;
-}
-.site-header .site-nav .nav-lang-switch a {
-  color: #FFFFFF;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.site-header .site-nav .nav-lang-switch a:hover {
-  background-color: #FFFFFF;
-  color: #D6E3E4;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,283 @@
 <%- include('partials/header') %>
 <title><%= __('HOME_PAGE_TITLE') %></title>
 
-<main>
-  <h1><%= __('HOME_TITLE') %></h1>
-  <p><%= __('HOME_DESCRIPTION') %></p>
-  <a href="/menu"><%= __('HOME_CTA_MENU') %></a>
+<main class="home-page" role="main">
+  <!-- 1) Hero Section -->
+  <section class="hero-section" role="region" aria-labelledby="hero-headline">
+    <figure class="hero-image">
+      <!-- Replace /images/hero.jpg with your actual hero image path -->
+
+      <div class="hero-content">
+        <h1 id="hero-headline">
+          <!-- "Taste that stays with you!" -->
+          <%= __('HOME_HERO_HEADLINE') %>
+          <!-- If you prefer inline text, you can place it directly: 
+               Taste that stays with you! 
+          -->
+        </h1>
+
+        <p class="hero-subheadline">
+          <!-- “Something new is coming! Fresh and tasty, ready to delight your taste buds.” -->
+          <%= __('HOME_HERO_SUBHEADLINE') %>
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-buttons">
+          <a class="cta-button cta-button--primary" href="#delivery-partners">
+            <!-- “Order on Wolt” -->
+            <%= __('HOME_HERO_CTA_DELIVER') %>
+          </a>
+          <a class="cta-button cta-button--secondary" href="#featured-menu">
+            <!-- “Order on Baboon” -->
+            <%= __('HOME_HERO_CTA_MENU') %>
+          </a>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <section class="partner-section">
+    <div class="container">
+      <h2 class="heading-featured-in">Partner with</h2>
+      <div class="logos">
+        <img src="images/wolt.png" alt="Wolt logo" />
+        <img src="images/baboon.png" alt=" Baboon logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) Tagline & Neon Quotes -->
+  <section
+    class="tagline-section"
+    role="region"
+    aria-labelledby="tagline-title"
+  >
+    <figure class="neon-image neon-image-1">
+      <img
+        src="/images/neon1.jpeg"
+        alt="Neon sign: WRAPS LAUGHS, AND NO TIME FOR HALFS!"
+      />
+    </figure>
+    <!-- Tagline 1 -->
+    <div class="tagline-content">
+      <h2 class="tagline-quote tagline-1">
+        WRAPS, LAUGHS, AND NO TIME FOR HALFS!
+      </h2>
+
+      <p class="tagline-supporting-text">
+        <!-- Supporting text from refined content -->
+        <%= __('HOME_TAGLINE_SUPPORT') %>
+      </p>
+    </div>
+
+    <!-- Tagline 2 -->
+    <!-- <h2 class="tagline-quote tagline-2">
+      GRILL, CHILL, AND HAVE YOUR FILL!
+    </h2>
+    <figure class="neon-image neon-image-2">
+      <img src="/images/neon1.jpg" alt="Neon sign: GRILL, CHILL, AND HAVE YOUR FILL!">
+    </figure> -->
+  </section>
+
+  <!-- 4) Tasty & Fresh -->
+  <section class="tasty-fresh" role="region" aria-labelledby="tasty-title">
+    <h2 id="tasty-title">Tasty & Fresh, Every Single Day</h2>
+    <p><%= __('TASTY_TITLE') %></p>
+
+    <ul class="fresh-highlights">
+      <li>
+        <span style="font-weight: 700"><%= __('HIGHLIGHT_TITLE-1') %></span
+        ><br /><%= __('HIGHLIGHT_DESC-1') %>
+      </li>
+      <li>
+        <span style="font-weight: 700"><%= __('HIGHLIGHT_TITLE-2') %></span
+        ><br />
+        <%= __('HIGHLIGHT_DESC-2') %>
+      </li>
+      <li>
+        <span style="font-weight: 700"><%= __('HIGHLIGHT_TITLE-3') %></span
+        ><br />
+        <%= __('HIGHLIGHT_DESC-3') %>
+      </li>
+    </ul>
+
+    <div class="tasty-pics">
+      <figure class="fresh-image">
+        <img
+          src="/images/fresh-bites.jpeg"
+          alt="Crispy bites in a branded box, demonstrating fresh quality"
+        />
+      </figure>
+      <figure class="fresh-image">
+        <img
+          src="/images/fresh-bites-2.jpeg"
+          alt="Crispy bites in a branded box, demonstrating fresh quality"
+        />
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3) Best Pick – Our Suflaki -->
+  <section class="best-pick" role="region" aria-labelledby="best-pick-title">
+    <h2 id="best-pick-title">Our Best Pick: Suflaki!</h2>
+    <p>
+      Suflaki is a timeless street food favorite that captures the spirit of
+      Greek and Mediterranean flavors. At ZAHAA, we marinate our tender cuts of
+      meat with a special blend of spices, fresh coriander, and olive oil.
+      Grilled to perfection and wrapped in our signature warm pita, it’s an
+      absolute must-try for first-timers and regulars alike. Pair it with our
+      homemade tzatziki or spicy sauces for an extra kick.
+    </p>
+
+    <figure class="best-pick-image">
+      <img
+        src="/images/suflaki.jpg"
+        alt="Close-up of our signature Suflaki dish"
+      />
+    </figure>
+  </section>
+
+  <!-- 5) About ZAHAA (Teaser) -->
+  <section
+    class="about-teaser"
+    role="region"
+    aria-labelledby="about-teaser-title"
+  >
+    <h2 id="about-teaser-title">Who We Are</h2>
+    <p>
+      ZAHAA – GRILL & STREET FOOD was born from a passion for bold flavors,
+      friendly service, and a welcoming atmosphere. We believe that
+      <strong>great food</strong> and <strong>great company</strong> make the
+      best memories. Our team is committed to bringing a fresh twist to classic
+      street food—fusing Mediterranean tradition with contemporary flair.
+    </p>
+    <a class="about-button" href="/about">Learn More</a>
+
+    <figure class="about-image">
+      <img
+        src="/images/about.jpg"
+        alt="Interior design with green leaves and modern lighting"
+      />
+    </figure>
+  </section>
+
+  <!-- 6) Featured Menu Items (Sneak Peek) -->
+  <section
+    id="featured-menu"
+    class="featured-menu"
+    role="region"
+    aria-labelledby="featured-menu-title"
+  >
+    <h2 id="featured-menu-title">Check Out Our Signature Dishes</h2>
+
+    <!-- Example item highlights -->
+    <div class="featured-items-grid">
+      <article class="featured-item">
+        <h3>The ZAHAA Burger</h3>
+        <p>
+          A succulent patty, caramelized onions, crisp lettuce, coriander mayo,
+          and a brioche bun.
+        </p>
+      </article>
+
+      <article class="featured-item">
+        <h3>Grilled Chicken Suflaki</h3>
+        <p>
+          Tender marinated chicken skewers, tzatziki, tomatoes, and baby
+          spinach.
+        </p>
+      </article>
+
+      <article class="featured-item">
+        <h3>Veggie Wrap</h3>
+        <p>
+          Roasted veggies, baby spinach, feta cheese, and our homemade herb
+          sauce.
+        </p>
+      </article>
+
+      <article class="featured-item">
+        <h3>Street Fries</h3>
+        <p>
+          Crispy fries loaded with cheese, spices, and a drizzle of our secret
+          sauce.
+        </p>
+      </article>
+    </div>
+
+    <p class="featured-menu-note">
+      Feeling hungry? There’s more where that came from! Indulge in our loaded
+      wraps, sizzling grill plates, and refreshing sides—each designed to
+      satisfy your cravings.
+    </p>
+
+    <a class="cta-button" href="/menu">View Full Menu</a>
+
+    <figure class="featured-image">
+      <img
+        src="/images/sandwich.jpg"
+        alt="Close-up sandwich in front of a ZAHAA sign"
+      />
+    </figure>
+  </section>
+
+  <!-- 7) Location & Opening Hours (Teaser) -->
+  <section
+    class="location-hours"
+    role="region"
+    aria-labelledby="location-title"
+  >
+    <h2 id="location-title">Find Us & Dig In</h2>
+    <p>
+      We’re conveniently located in the heart of town, ready to serve up fresh,
+      flavorful bites from morning until late. Come visit us for a quick lunch,
+      a relaxed dinner, or a late-night snack!
+    </p>
+
+    <address class="restaurant-address">123 Flavor Street, Foodie Town</address>
+
+    <div class="opening-hours">
+      <p><strong>Mon – Fri:</strong> 11 AM – 11 PM</p>
+      <p><strong>Sat – Sun:</strong> 12 PM – 12 AM</p>
+    </div>
+
+    <a class="contact-button" href="/contact">Contact Us</a>
+  </section>
+
+  <!-- 8) Delivery Partners -->
+  <section
+    id="delivery-partners"
+    class="delivery-partners"
+    role="region"
+    aria-labelledby="delivery-title"
+  >
+    <h2 id="delivery-title">Get It Delivered to Your Doorstep</h2>
+    <p>
+      Don’t feel like stepping out? We’ve got you covered. Thanks to our
+      <strong>trusted delivery partners</strong>, you can enjoy ZAHAA’s
+      mouthwatering dishes from the comfort of your home. Browse our menu on
+      <strong>Wolt</strong> or <strong>Baboon</strong> and experience
+      street-food bliss without leaving your couch.
+    </p>
+
+    <div class="delivery-logos">
+      <img src="/images/wolt-logo.png" alt="Wolt Delivery Logo" />
+      <img src="/images/baboon-logo.png" alt="Baboon Delivery Logo" />
+    </div>
+
+    <div class="delivery-buttons">
+      <a
+        class="delivery-button wolt"
+        href="https://wolt.example.com/your-restaurant"
+        >Order on Wolt</a
+      >
+      <a
+        class="delivery-button baboon"
+        href="https://baboon.example.com/your-restaurant"
+        >Order on Baboon</a
+      >
+    </div>
+  </section>
 </main>
 
 <%- include('partials/footer') %>

@@ -1,29 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /************************************************************
- * style.scss
- * Master file importing all partials
- ************************************************************/
+* style.scss
+* Master file importing all partials
+************************************************************/
 
 /* 1) BASE */
-@import 'base/variables';
-@import 'base/mixins';
-@import 'base/reset';
+@use 'base/variables';
+@use 'base/mixins';
+@use 'base/reset';
 
 /* 2) LAYOUT */
-@import 'layout/nav';
-@import 'layout/header';
-@import 'layout/footer';
+@use 'layout/nav';
+@use 'layout/header';
+@use 'layout/footer';
 
 /* 3) COMPONENTS */
-@import 'components/buttons';
-@import 'components/cards';
+@use 'components/buttons';
+@use 'components/cards';
 
 /* 4) PAGES */
-@import 'pages/home';
-@import 'pages/about';
-@import 'pages/contact';
-@import 'pages/menu';
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/contact';
+@use 'pages/menu';
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
 
@@ -77,111 +77,6 @@ body {
     }
     &__price {
       font-weight: bold;
-    }
-  }
-  
-
-  //// header
-  /*******************************************************
- * NAVIGATION STYLES
- * Background color: #D6E3E4
- * Text color: #FFFFFF
- *******************************************************/
-
-.site-header {
-    background-color: #D6E3E4;     // Tasty, modern background
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    height: 70px;
-  
-    // Logo / Branding area (if you have a .site-logo element)
-    .site-logo {
-      font-size: 2.5rem;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-  
-      &:hover {
-        color: #ffffffd5;
-      }
-    }
-  
-    // The main nav container
-    .site-nav {
-      display: flex;
-      align-items: center;
-      
-      // The <ul> that holds your nav links
-      .nav-list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1.5rem;  // Space between nav items
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        
-  
-        // Each nav item (li)
-        .nav-item {
-          // The <a> inside each item
-          .nav-link {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-size: 1rem;
-            position: relative;
-            transition: color 0.3s ease;
-  
-            &:hover {
-              // On hover, optionally darken the text or add an effect
-              color: #ffffffd5; 
-            }
-  
-            // Subtle underline animation on hover
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: -3px;
-              left: 0;
-              width: 0%;
-              height: 2px;
-              background-color: #FFFFFF;
-              transition: width 0.3s ease;
-            }
-  
-            &:hover::after {
-              width: 100%;
-            }
-          }
-        }
-      }
-  
-      // The language switch container (if you have .nav-lang-switch)
-      .nav-lang-switch {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-left: 1rem;
-  
-        // If your language links are <a> tags
-        a {
-          color: #FFFFFF;
-          text-decoration: none;
-          border: 1px solid #FFFFFF;
-          padding: 0.3rem 0.6rem;
-          border-radius: 4px;
-          font-size: 0.9rem;
-          transition: background-color 0.3s ease, color 0.3s ease;
-  
-          &:hover {
-            background-color: #FFFFFF;
-            color: #D6E3E4; 
-          }
-        }
-      }
     }
   }
   

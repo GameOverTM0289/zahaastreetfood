@@ -6,15 +6,25 @@
 /* If not imported globally, you can import the font here: */
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.site-header {
-    background-color: #D6E3E4;  /* Tasty background */
+.site-header  {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+    background-color: #9CBBBC;  /* Tasty background */
     font-family: 'Montserrat', sans-serif;
   
     .header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 2rem;
+      padding: 1rem 6rem;
     }
   
     /* Logo link on the left */
@@ -24,8 +34,14 @@
       align-items: center;
   
       .site-logo {
+        cursor: default;
+        user-select: none;
         height: 50px;
         width: auto;
+        transition: all ease-in 0.1s;
+      }
+      .site-logo:hover {
+        opacity: 0.7;
       }
     }
   
@@ -49,7 +65,7 @@
             transition: color 0.3s ease;
   
             &:hover {
-              color: #333; /* highlight on hover */
+              color: #615e5e; /* highlight on hover */
             }
           }
   
@@ -84,8 +100,8 @@
                 }
   
                 &:hover {
-                  background-color: #FFFFFF;
-                  color: #D6E3E4;
+                  background-color:#9cbbbc62;
+                  color: #f3f3f3;
   
                   .arrow-down {
                     border-top-color: #D6E3E4;
@@ -98,9 +114,9 @@
                 position: absolute;
                 top: 100%;
                 right: 0;
-                background-color: #D6E3E4;
+                background-color: #fff;
                 min-width: 120px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                box-shadow: 0 6px 10px rgba(14, 13, 13, 0.1);
                 border-radius: 4px;
                 overflow: hidden;
                 z-index: 10;
@@ -108,14 +124,14 @@
                 a {
                   display: block;
                   padding: 0.5rem 1rem;
-                  color: #FFFFFF;
+                  color: #202020;
                   text-decoration: none;
                   font-size: 0.9rem;
                   transition: background-color 0.3s ease;
   
                   &:hover {
                     background-color: #FFFFFF;
-                    color: #D6E3E4;
+                    color: #a9b5b6;
                   }
                 }
               }
