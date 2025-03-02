@@ -4,37 +4,27 @@
 <main class="home-page" role="main">
   <!-- 1) Hero Section -->
   <section class="hero-section" role="region" aria-labelledby="hero-headline">
-    <figure class="hero-image">
-      <!-- Replace /images/hero.jpg with your actual hero image path -->
-
+    <div class="hero-image">
       <div class="hero-content">
-        <h1 id="hero-headline">
-          <!-- "Taste that stays with you!" -->
-          <%= __('HOME_HERO_HEADLINE') %>
-          <!-- If you prefer inline text, you can place it directly: 
-               Taste that stays with you! 
-          -->
-        </h1>
-
-        <p class="hero-subheadline">
-          <!-- “Something new is coming! Fresh and tasty, ready to delight your taste buds.” -->
-          <%= __('HOME_HERO_SUBHEADLINE') %>
-        </p>
-
+        <h1 id="hero-headline"><%= __('HOME_HERO_HEADLINE') %></h1>
+  
+        <p class="hero-subheadline"><%= __('HOME_HERO_SUBHEADLINE') %></p>
+  
         <!-- CTA Buttons -->
         <div class="hero-cta-buttons">
           <a class="cta-button cta-button--primary" href="#delivery-title">
-            <!-- “Order on Wolt” -->
             <%= __('HOME_HERO_CTA_DELIVER') %>
           </a>
           <a class="cta-button cta-button--secondary" href="/menu">
-            <!-- “Order on Baboon” -->
             <%= __('HOME_HERO_CTA_MENU') %>
+            <ion-icon name="book-outline"></ion-icon>
           </a>
         </div>
       </div>
-    </figure>
+    </div>
   </section>
+  
+  
 
   <!-- 2) Partner section -->
   <section class="partner-section">
@@ -49,33 +39,30 @@
 
   <!-- 3) Tagline & Neon Quotes -->
   <section
-    class="tagline-section"
-    role="region"
-    aria-labelledby="tagline-title"
-  >
-    <figure class="neon-image neon-image-1">
-      <img
-        src="/images/neon1.jpeg"
-        alt="Neon sign: WRAPS LAUGHS, AND NO TIME FOR HALFS!"
-      />
-    </figure>
-    <!-- Tagline 1 -->
-    <div class="tagline-content">
-      <h2 class="tagline-quote tagline-1"><%= __('HOME_TAGLINE_TITLE') %></h2>
+  class="tagline-section"
+  role="region"
+  aria-labelledby="tagline-title"
+>
+  <!-- Neon Image -->
+  <figure class="neon-image neon-image-1">
+    <img
+      src="/images/neon1.jpeg"
+      alt="Neon sign: WRAPS LAUGHS, AND NO TIME FOR HALFS!"
+    />
+  </figure>
 
-      <p class="tagline-supporting-text">
-        <%= __('HOME_TAGLINE_SUPPORT') %>
-      </p>
-    </div>
-
-    <!-- Tagline 2 -->
-    <!-- <h2 class="tagline-quote tagline-2">
-      GRILL, CHILL, AND HAVE YOUR FILL!
+  <!-- Tagline Text Content -->
+  <div class="tagline-content">
+    <h2 id="tagline-title" class="tagline-quote tagline-1">
+      <%= __('HOME_TAGLINE_TITLE') %>
     </h2>
-    <figure class="neon-image neon-image-2">
-      <img src="/images/neon1.jpg" alt="Neon sign: GRILL, CHILL, AND HAVE YOUR FILL!">
-    </figure> -->
-  </section>
+
+    <p class="tagline-supporting-text">
+      <%= __('HOME_TAGLINE_SUPPORT') %>
+    </p>
+  </div>
+</section>
+
 
   <!-- 4) Tasty & Fresh -->
   <section class="tasty-fresh" role="region" aria-labelledby="tasty-title">
@@ -122,25 +109,31 @@
 
   <!-- 5) About ZAHAA (Teaser) -->
   <section
-    class="about-teaser"
-    role="region"
-    aria-labelledby="about-teaser-title"
-  >
+  class="about-teaser"
+  role="region"
+  aria-labelledby="about-teaser-title"
+>
+  <!-- About Text Content -->
   <div class="about-content">
     <h2 id="about-teaser-title"><%= __('ABOUT_TITLE') %></h2>
     <p>
+      <!-- Example usage of placeholders with strong tags -->
       <%- __("ABOUT_DESC").replace("{strong}", "<strong>").replace("{/strong}", "</strong>") %>
-
     </p>
-    <a class="about-button" href="/about"><%- __("ABOUT_BUTTON")%></a>
-</div>
-    <figure class="about-image">
-      <img
-        src="/images/about.jpeg"
-        alt="Interior design with green leaves and modern lighting"
-      />
-    </figure>
-  </section>
+    <a class="about-button" href="/about">
+      <%- __("ABOUT_BUTTON") %>
+    </a>
+  </div>
+
+  <!-- About Image -->
+  <figure class="about-image">
+    <img
+      src="/images/about.jpeg"
+      alt="Interior design with green leaves and modern lighting"
+    />
+  </figure>
+</section>
+
 
   <!-- 6) Featured Menu Items (Sneak Peek) -->
   <section

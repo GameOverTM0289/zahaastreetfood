@@ -21,44 +21,48 @@
 /* 2) LAYOUT */
 /*************************************************************
  * HEADER/ NAVIGATION SCSS
- * Using Montserrat font, background #D6E3E4, white text (#FFF)
+ * - Montserrat font
+ * - #5e9597 background
+ * - Language flags
+ * - Responsive: smaller logo, more gap on mobile,
+ *   nav hidden behind a burger icon, 
+ *   language switch on left of burger icon
  *************************************************************/
-/* If not imported globally, you can import the font here: */
+/* If not imported globally, import the font here:
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
 .site-header {
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
-  height: fit-content;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: #5e9597; /* Tasty background */
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
-  background-color: #5e9597; /* Tasty background */
   font-family: "Montserrat", sans-serif;
-  /* Logo link on the left */
-  /* The nav container on the right */
+  /* Left: Logo */
+  /* Middle: Nav */
+  /* Right: Language switch + burger */
 }
 .site-header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* More breathable on desktop */
   padding: 1rem 6rem;
 }
-.site-header .site-logo-link {
-  text-decoration: none;
+.site-header .header-left .site-logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
-.site-header .site-logo-link .site-logo {
+.site-header .header-left .site-logo-link .site-logo {
   cursor: default;
   user-select: none;
   height: 50px;
   width: auto;
-  transition: all ease-in 0.1s;
+  transition: opacity 0.1s ease-in;
 }
-.site-header .site-logo-link .site-logo:hover {
+.site-header .header-left .site-logo-link .site-logo:hover {
   opacity: 0.7;
 }
 .site-header .site-nav .nav-list {
@@ -69,27 +73,29 @@
   padding: 0;
   gap: 1.5rem;
 }
-.site-header .site-nav .nav-list .nav-item {
-  /* Language switch container */
-}
-.site-header .site-nav .nav-list .nav-item .nav-link {
+.site-header .site-nav .nav-item .nav-link {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+.site-header .site-nav .nav-item .nav-link:hover {
+  opacity: 0.8;
+}
+.site-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Burger menu icon (hidden on desktop) */
+}
+.site-header .header-right .nav-lang-switch {
   position: relative;
-  transition: all 0.3s ease;
 }
-.site-header .site-nav .nav-list .nav-item .nav-link:hover {
-  opacity: 0.8; /* highlight on hover */
-}
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch {
+.site-header .header-right .nav-lang-switch .lang-dropdown {
   position: relative;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown {
-  position: relative;
-}
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button {
+.site-header .header-right .nav-lang-switch .lang-dropdown__button {
   background-color: transparent;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
@@ -103,7 +109,11 @@
   gap: 0.4rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button .arrow-down {
+.site-header .header-right .nav-lang-switch .lang-dropdown__button .flag-icon {
+  height: 20px;
+  width: auto;
+}
+.site-header .header-right .nav-lang-switch .lang-dropdown__button .arrow-down {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -111,45 +121,89 @@
   border-top: 5px solid #FFFFFF;
   transition: border-top-color 0.3s ease;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button:hover {
+.site-header .header-right .nav-lang-switch .lang-dropdown__button:hover {
   background-color: rgba(156, 187, 188, 0.3843137255);
   color: #f3f3f3;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__button:hover .arrow-down {
+.site-header .header-right .nav-lang-switch .lang-dropdown__button:hover .arrow-down {
   border-top-color: #D6E3E4;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content {
-  display: none; /* hidden by default, toggled via JS */
+.site-header .header-right .nav-lang-switch .lang-dropdown__content {
+  display: none; /* toggled via JS */
   position: absolute;
   top: 100%;
   right: 0;
   background-color: #fff;
-  min-width: 120px;
+  min-width: 80px;
   box-shadow: 0 6px 10px rgba(14, 13, 13, 0.1);
   border-radius: 4px;
   overflow: hidden;
   z-index: 10;
+  padding: 0.5rem;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content a {
+.site-header .header-right .nav-lang-switch .lang-dropdown__content a {
   display: block;
-  padding: 0.5rem 1rem;
-  color: #202020;
+  margin-bottom: 0.5rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  text-align: center;
 }
-.site-header .site-nav .nav-list .nav-item.nav-lang-switch .lang-dropdown__content a:hover {
-  background-color: #FFFFFF;
-  color: #a9b5b6;
+.site-header .header-right .nav-lang-switch .lang-dropdown__content a .flag-icon {
+  height: 24px;
+  width: auto;
 }
-
-/* Optional styling for <hr> after the header */
-hr {
+.site-header .header-right .burger-menu {
+  background: none;
   border: none;
-  border-top: 1px solid #ccc;
-  margin: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.2s ease;
+}
+.site-header .header-right .burger-menu:hover {
+  opacity: 0.8;
 }
 
+/* 
+  RESPONSIVE STYLES:
+  - On smaller screens, smaller logo, more gap on left/right
+  - The nav is hidden, replaced by burger
+  - Language switch is left of burger
+*/
+@media (max-width: 768px) {
+  .site-header {
+    /* Hide the nav by default, show with JS toggle */
+  }
+  .site-header .header-container {
+    /* less horizontal padding on mobile */
+    padding: 0.7rem 1.5rem;
+  }
+  .site-header .header-left .site-logo-link .site-logo {
+    height: 40px; /* smaller logo on mobile */
+  }
+  .site-header .header-right {
+    /* reorder: language switch first, burger second */
+    flex-direction: row;
+  }
+  .site-header .header-right .nav-lang-switch {
+    order: 1;
+  }
+  .site-header .header-right .burger-menu {
+    display: block; /* show burger on mobile */
+    order: 2;
+  }
+  .site-header .site-nav .nav-list {
+    position: absolute;
+    top: 60px; /* below the header */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #5e9597;
+    gap: 1rem;
+    padding: 1rem;
+    display: none; /* toggled by JS */
+  }
+}
 /************************************************************
  * FOOTER SCSS
  * - Darker background (#3f7374) for stronger contrast
@@ -165,8 +219,6 @@ hr {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   padding: 4rem 6rem; /* bigger height */
-  margin-top: 3rem; /* optional spacing above footer */
-  /* If you want it to always appear at bottom, do not fix it if there's dynamic content */
   /* 1) Brand / Logo / Basic Info */
   /* 2) Footer Navigation Links */
   /* 3) Social Media */
@@ -382,6 +434,7 @@ hr {
   z-index: 2; /* above the overlay */
   max-width: 700px;
   margin: 0 1rem;
+  margin-top: 80px;
   color: #fff;
 }
 .hero-section .hero-content #hero-headline {
@@ -401,6 +454,49 @@ hr {
   margin-bottom: 2rem;
 }
 
+/* ========== BREAKPOINT 1: max-width: 1024px ========== */
+@media (max-width: 1024px) {
+  .hero-section .hero-image .hero-content #hero-headline {
+    font-size: 3.6rem;
+  }
+  .hero-section .hero-image .hero-content .hero-subheadline {
+    font-size: 1.4rem;
+  }
+}
+/* ========== BREAKPOINT 2: max-width: 768px ========== */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 90vh;
+    /* Shift background to the left on mobile (opposite of shifting right) */
+    background-position: left center;
+  }
+  .hero-section .hero-image .hero-content {
+    margin-top: 80px;
+  }
+  .hero-section .hero-image .hero-content #hero-headline {
+    font-size: 3.2rem;
+  }
+  .hero-section .hero-image .hero-content .hero-subheadline {
+    font-size: 1.2rem;
+  }
+}
+/* ========== BREAKPOINT 3: max-width: 480px ========== */
+@media (max-width: 480px) {
+  .hero-section {
+    height: 75vh;
+    background-position: 12% center; /* remain left on smaller screens */
+  }
+  .hero-section .hero-image .hero-content {
+    margin-top: 120px;
+  }
+  .hero-section .hero-image .hero-content #hero-headline {
+    font-size: 2.6rem;
+  }
+  .hero-section .hero-image .hero-content .hero-subheadline {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
 .partner-section {
   padding: 1.8rem 0 1.8rem 0;
   background-color: #dfdfdf;
@@ -430,37 +526,32 @@ hr {
 }
 
 /* 2) Tagline & Neon Quotes */
+/*************************************************************
+ * TAGLINE.SCSS
+ * Responsive tagline section with an image on one side 
+ * and text on the other. Uses three breakpoints:
+ *  - max-width: 1024px
+ *  - max-width: 768px
+ *  - max-width: 480px
+ *************************************************************/
+/* If not imported globally, you can import the font here:
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
 .tagline-section {
-  padding: 2rem 8em;
+  padding: 2rem 8rem; /* big horizontal space on desktop */
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  align-items: center;
   gap: 4rem;
-  border-bottom: 1px solid #9cbbbc;
-}
-.tagline-section .tagline-content {
-  width: 70%;
   margin: 0 auto;
-}
-.tagline-section .tagline-quote {
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: #444;
-  margin: 2rem auto;
-  text-align: left;
-}
-.tagline-section .tagline-supporting-text {
-  font-size: 1.2rem;
-  color: #474747;
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 1.2;
+  border-bottom: 1px solid #9cbbbc;
+  /* Neon Image Container */
+  /* Text Content */
 }
 .tagline-section .neon-image {
-  margin: 1rem auto;
-  max-width: 600px;
+  margin: 0 auto;
+  max-width: 660px;
 }
 .tagline-section .neon-image img {
   width: 100%;
@@ -468,13 +559,78 @@ hr {
   border: 8px solid #9cbbbc;
   border-radius: 36px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  opacity: 90%;
-  transition: all ease 0.2s;
+  opacity: 0.9;
+  transition: transform 0.2s ease;
 }
 .tagline-section .neon-image img:hover {
-  transform: scale(95%);
+  transform: scale(0.95);
+}
+.tagline-section .tagline-content {
+  width: 70%;
+  margin: 0 auto;
+}
+.tagline-section .tagline-content .tagline-quote {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.tagline-section .tagline-content .tagline-supporting-text {
+  font-size: 1.2rem;
+  color: #474747;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
 
+/* ========== BREAKPOINT 1: max-width: 1024px ========== */
+@media (max-width: 1024px) {
+  .tagline-section {
+    padding: 2rem 4rem; /* reduce horizontal padding */
+  }
+  .tagline-section .tagline-content .tagline-quote {
+    font-size: 1.8rem;
+  }
+  .tagline-section .tagline-content .tagline-supporting-text {
+    font-size: 1.1rem;
+  }
+}
+/* ========== BREAKPOINT 2: max-width: 768px ========== */
+@media (max-width: 768px) {
+  .tagline-section {
+    /* stack image on top of text */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 2rem;
+  }
+  .tagline-section .neon-image {
+    max-width: 100%; /* use full width on mobile */
+  }
+  .tagline-section .tagline-content {
+    width: 100%; /* text also full width */
+  }
+  .tagline-section .tagline-content .tagline-quote {
+    font-size: 1.6rem;
+  }
+  .tagline-section .tagline-content .tagline-supporting-text {
+    font-size: 1rem;
+  }
+}
+/* ========== BREAKPOINT 3: max-width: 480px ========== */
+@media (max-width: 480px) {
+  .tagline-section {
+    /* can further reduce padding if desired */
+    padding: 1.5rem 2.2rem;
+  }
+  .tagline-section .tagline-content .tagline-quote {
+    font-size: 1.4rem;
+  }
+  .tagline-section .tagline-content .tagline-supporting-text {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+}
 /* 3) Best Pick – Our Suflaki */
 .best-pick {
   padding: 2.5rem 1rem;
@@ -577,29 +733,45 @@ hr {
   transition: transform 0.3s ease;
 }
 
-/* 5) About Teaser */
+/*************************************************************
+ * ABOUT-TEASER.SCSS
+ * A responsive "About" teaser section with text + image.
+ * Desktop: side by side
+ * Mobile: stacked
+ * Three breakpoints: 1024px, 768px, 480px
+ *************************************************************/
+/* If not imported globally, import Montserrat or your font here:
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
 .about-teaser {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* no wrap on desktop, we handle wrap in breakpoints */
   gap: 2rem;
   padding: 2.5rem 6rem;
-  text-align: center;
   background-color: #ebebeb;
+  text-align: left; /* default left alignment for text */
+  margin: 0 auto;
+  /* The about-content (text area) */
+  /* The about-image (figure) */
 }
-.about-teaser #about-teaser-title {
+.about-teaser .about-content {
+  flex: 1; /* let it fill remaining space */
+  max-width: 660px; /* optional cap for readability */
+  text-align: left;
+}
+.about-teaser .about-content #about-teaser-title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #333;
 }
-.about-teaser p {
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
+.about-teaser .about-content p {
   line-height: 1.6;
   color: #555;
+  margin-bottom: 2rem;
 }
-.about-teaser .about-button {
+.about-teaser .about-content .about-button {
   display: inline-block;
   background-color: #9cbbbc;
   color: #333;
@@ -609,12 +781,12 @@ hr {
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.about-teaser .about-button:hover {
+.about-teaser .about-content .about-button:hover {
   background-color: #88a5a6;
   transform: translateY(-2px);
 }
 .about-teaser .about-image {
-  margin: 2rem auto 0 auto;
+  flex: 1; /* also takes remaining space */
   max-width: 600px;
 }
 .about-teaser .about-image img {
@@ -623,10 +795,50 @@ hr {
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.about-teaser .about-content {
-  text-align: left;
-}
 
+/* ========== BREAKPOINT 1: max-width: 1024px ========== */
+@media (max-width: 1024px) {
+  .about-teaser {
+    padding: 2.5rem 4rem; /* reduce horizontal padding */
+  }
+  .about-teaser .about-content #about-teaser-title {
+    font-size: 1.6rem;
+  }
+  .about-teaser .about-content p {
+    font-size: 1rem;
+  }
+}
+/* ========== BREAKPOINT 2: max-width: 768px ========== */
+@media (max-width: 768px) {
+  .about-teaser {
+    flex-wrap: wrap; /* stack text and image */
+    padding: 2rem 2rem;
+    text-align: center; /* center text on smaller screens? optional */
+  }
+  .about-teaser .about-content,
+  .about-teaser .about-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .about-teaser .about-content #about-teaser-title {
+    font-size: 1.4rem;
+  }
+  .about-teaser .about-content p {
+    font-size: 0.95rem;
+  }
+}
+/* ========== BREAKPOINT 3: max-width: 480px ========== */
+@media (max-width: 480px) {
+  .about-teaser {
+    padding: 1.5rem 1rem;
+  }
+  .about-teaser .about-content #about-teaser-title {
+    font-size: 1.3rem;
+  }
+  .about-teaser .about-content p {
+    font-size: 0.9rem;
+  }
+}
 /* 6) Featured Menu Items */
 .featured-menu {
   padding: 2.5rem 1rem;
@@ -713,7 +925,7 @@ hr {
 .location-hours {
   padding: 2.5rem 1rem;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #f3f3f3;
   border-top: 4px dotted #5E9597;
   /***********************************************************
    * MAP SECTION (SCSS) - Reduced Height
@@ -844,9 +1056,13 @@ hr {
 }
 .delivery-partners .delivery-buttons .delivery-button.wolt {
   /* optional specific style for Wolt button */
+  background-color: #00C2E8;
+  color: #fff;
 }
 .delivery-partners .delivery-buttons .delivery-button.baboon {
   /* optional specific style for Baboon button */
+  background-color: #FF0141;
+  color: #fff;
 }
 
 /*************************************************************

@@ -1,151 +1,222 @@
 /*************************************************************
  * HEADER/ NAVIGATION SCSS
- * Using Montserrat font, background #D6E3E4, white text (#FFF)
+ * - Montserrat font
+ * - #5e9597 background
+ * - Language flags
+ * - Responsive: smaller logo, more gap on mobile,
+ *   nav hidden behind a burger icon, 
+ *   language switch on left of burger icon
  *************************************************************/
 
-/* If not imported globally, you can import the font here: */
+/* If not imported globally, import the font here:
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
 
-.site-header  {
+.site-header {
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
-  height: fit-content;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: #5e9597; /* Tasty background */
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
-    background-color: #5e9597;  /* Tasty background */
-    font-family: 'Montserrat', sans-serif;
-  
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 6rem;
-    }
-  
-    /* Logo link on the left */
+  font-family: 'Montserrat', sans-serif;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* More breathable on desktop */
+    padding: 1rem 6rem;
+  }
+
+  /* Left: Logo */
+  .header-left {
     .site-logo-link {
-      text-decoration: none;
       display: flex;
       align-items: center;
-  
+      text-decoration: none;
+
       .site-logo {
         cursor: default;
         user-select: none;
         height: 50px;
         width: auto;
-        transition: all ease-in 0.1s;
-      }
-      .site-logo:hover {
-        opacity: 0.7;
+        transition: opacity 0.1s ease-in;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
-  
-    /* The nav container on the right */
-    .site-nav {
-      .nav-list {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 1.5rem;
-  
-        .nav-item {
-          .nav-link {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            position: relative;
-            transition: all 0.3s ease;
-  
-            &:hover {
-              opacity: 0.8; /* highlight on hover */
+  }
+
+  /* Middle: Nav */
+  .site-nav {
+    .nav-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1.5rem;
+    }
+
+    .nav-item {
+      .nav-link {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  /* Right: Language switch + burger */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-lang-switch {
+      position: relative;
+
+      .lang-dropdown {
+        position: relative;
+
+        &__button {
+          background-color: transparent;
+          border: 1px solid #FFFFFF;
+          color: #FFFFFF;
+          padding: 0.4rem 0.8rem;
+          border-radius: 4px;
+          font-family: inherit;
+          font-size: 0.9rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          .flag-icon {
+            height: 20px;
+            width: auto;
+          }
+
+          .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #FFFFFF;
+            transition: border-top-color 0.3s ease;
+          }
+
+          &:hover {
+            background-color: #9cbbbc62;
+            color: #f3f3f3;
+
+            .arrow-down {
+              border-top-color: #D6E3E4;
             }
           }
-  
-          /* Language switch container */
-          &.nav-lang-switch {
-            position: relative;
-  
-            .lang-dropdown {
-              position: relative;
-              
-              &__button {
-                background-color: transparent;
-                border: 1px solid #FFFFFF;
-                color: #FFFFFF;
-                padding: 0.4rem 0.8rem;
-                border-radius: 4px;
-                font-family: inherit;
-                font-size: 0.9rem;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                gap: 0.4rem;
-                transition: background-color 0.3s ease, color 0.3s ease;
-  
-                .arrow-down {
-                  width: 0;
-                  height: 0;
-                  border-left: 5px solid transparent;
-                  border-right: 5px solid transparent;
-                  border-top: 5px solid #FFFFFF;
-                  transition: border-top-color 0.3s ease;
-                }
-  
-                &:hover {
-                  background-color:#9cbbbc62;
-                  color: #f3f3f3;
-  
-                  .arrow-down {
-                    border-top-color: #D6E3E4;
-                  }
-                }
-              }
-  
-              &__content {
-                display: none; /* hidden by default, toggled via JS */
-                position: absolute;
-                top: 100%;
-                right: 0;
-                background-color: #fff;
-                min-width: 120px;
-                box-shadow: 0 6px 10px rgba(14, 13, 13, 0.1);
-                border-radius: 4px;
-                overflow: hidden;
-                z-index: 10;
-  
-                a {
-                  display: block;
-                  padding: 0.5rem 1rem;
-                  color: #202020;
-                  text-decoration: none;
-                  font-size: 0.9rem;
-                  transition: background-color 0.3s ease;
-  
-                  &:hover {
-                    background-color: #FFFFFF;
-                    color: #a9b5b6;
-                  }
-                }
-              }
+        }
+
+        &__content {
+          display: none; /* toggled via JS */
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background-color: #fff;
+          min-width: 80px;
+          box-shadow: 0 6px 10px rgba(14, 13, 13, 0.1);
+          border-radius: 4px;
+          overflow: hidden;
+          z-index: 10;
+          padding: 0.5rem;
+
+          a {
+            display: block;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            text-align: center;
+
+            .flag-icon {
+              height: 24px;
+              width: auto;
             }
           }
         }
       }
     }
+
+    /* Burger menu icon (hidden on desktop) */
+    .burger-menu {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
-  
-  /* Optional styling for <hr> after the header */
-  hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 0;
+}
+
+/* 
+  RESPONSIVE STYLES:
+  - On smaller screens, smaller logo, more gap on left/right
+  - The nav is hidden, replaced by burger
+  - Language switch is left of burger
+*/
+@media (max-width: 768px) {
+  .site-header {
+    .header-container {
+      /* less horizontal padding on mobile */
+      padding: 0.7rem 1.5rem;
+    }
+
+    .header-left {
+      .site-logo-link {
+        .site-logo {
+          height: 40px; /* smaller logo on mobile */
+        }
+      }
+    }
+
+    .header-right {
+      /* reorder: language switch first, burger second */
+      flex-direction: row;
+      .nav-lang-switch {
+        order: 1;
+      }
+      .burger-menu {
+        display: block; /* show burger on mobile */
+        order: 2;
+      }
+    }
+
+    /* Hide the nav by default, show with JS toggle */
+    .site-nav {
+      .nav-list {
+        position: absolute;
+        top: 60px; /* below the header */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #5e9597;
+        gap: 1rem;
+        padding: 1rem;
+        display: none; /* toggled by JS */
+      }
+    }
   }
-  
+}
