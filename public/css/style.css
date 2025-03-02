@@ -1418,7 +1418,7 @@
 /* If not imported globally, you can import the font here: */
 .menu-page {
   font-family: "Montserrat", sans-serif;
-  padding: 2rem;
+  padding: 6rem 2rem;
 }
 .menu-page__title {
   font-size: 2rem;
