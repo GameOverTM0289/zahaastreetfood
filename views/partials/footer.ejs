@@ -1,7 +1,77 @@
 <hr>
-<footer>
-  <p><%= __('COPYRIGHT') %></p>
-</footer>
+<!-- FOOTER PARTIAL (footer.ejs) -->
+<!-- Ionicons CDN for icons (place in <head> or here as needed) -->
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+  
+      <!-- 1) Brand / Logo / Basic Info -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo-link">
+          <img src="/images/logo.png" alt="ZAHAA Logo" class="footer-logo" />
+        </a>
+  
+        <p class="footer-address">
+          <i class="icon ion-md-pin"></i>  
+          Vath Koreshi, Tiranë 1010
+        </p>
+        <p class="footer-email">
+          <i class="icon ion-md-mail"></i>
+          <a href="mailto:info@zahaastreetfood.al">info@zahaastreetfood.al</a>
+        </p>
+      </div>
+  
+      <!-- 2) Footer Navigation Links -->
+      <div class="footer-links">
+        <h3 class="footer-links__title">Quick Links</h3>
+        <ul class="footer-links__list">
+          <li><a href="/"><%= __('NAV_HOME') %></a></li>
+          <li><a href="/menu"><%= __('NAV_MENU') %></a></li>
+          <li><a href="/about"><%= __('NAV_ABOUT') %></a></li>
+          <li><a href="/contact"><%= __('NAV_CONTACT') %></a></li>
+          <li><a href="/gallery"><%= __('NAV_GALLERY') %></a></li>
+        </ul>
+      </div>
+  
+      <!-- 3) Social Media -->
+      <div class="footer-social">
+        <h3 class="footer-social__title"><%- __("FOOTER_SOCIAL_TITLE")%></h3>
+        <ul class="footer-social__list">
+          <!-- <li>
+            <a href="#" target="_blank" rel="noopener">
+              <i class="icon ion-logo-facebook"></i> Facebook
+            </a>
+          </li> -->
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <i class="icon ion-logo-instagram"></i> Instagram
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#" target="_blank" rel="noopener">
+              <i class="icon ion-logo-tiktok"></i> TikTok
+            </a>
+          </li> -->
+        </ul>
+      </div>
+  
+      <!-- 4) Extra Info (Hours, etc.) -->
+      <div class="footer-extra">
+        <h3 class="footer-extra__title">Opening Hours</h3>
+        <p>
+          <%- __("WEEK_DAYS")%> 7AM – 11PM<br>
+          <%- __("WEEKEND_DAYS")%> 7AM – 11PM
+        </p>
+  
+        <p class="footer-copy">
+          © 2025 ZAHAA – GRILL & STREET FOOD. All rights reserved.
+        </p>
+      </div>
+  
+    </div> <!-- /.footer-container -->
+  </footer>
+  
 
 <script src="/js/nav.js"></script>
 </body>

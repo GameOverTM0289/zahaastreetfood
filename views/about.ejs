@@ -1,9 +1,54 @@
 <%- include('partials/header') %>
-<title><%= __('ABOUT_PAGE_TITLE') %></title>
+<main class="about-page" role="main">
+  
+  <!-- 1) Hero Section with Dark Overlay -->
+  <section class="about-hero" role="region" aria-labelledby="about-hero-title">
+    <div class="about-hero__overlay"></div>
+    <div class="about-hero__content">
+      <h1 id="about-hero-title"><%= __('ABOUT_TITLE') %></h1>
+      <p class="about-hero__subtitle"><%= __('ABOUT_TAGLINE') %></p>
+    </div>
+  </section>
 
-<main>
-  <h1><%= __('ABOUT_TITLE') %></h1>
-  <p><%= __('ABOUT_CONTENT') %></p>
+  <!-- 2) About Main Content -->
+  <section class="about-content" role="region" aria-labelledby="about-main-title">
+    <h2 id="about-main-title"><%= __('ABOUT_HEADING') %></h2>
+    <p class="about-paragraph">
+      <%= __('ABOUT_CONTENT') %>
+    </p>
+
+    <!-- Example bullet points or story highlights -->
+    <ul class="about-highlights">
+      <li><%= __('ABOUT_POINT1') %></li>
+      <li><%= __('ABOUT_POINT2') %></li>
+      <li><%= __('ABOUT_POINT3') %></li>
+    </ul>
+
+    <!-- Optional additional paragraph or mission statement -->
+    <p class="about-mission">
+      <%= __('ABOUT_MISSION') %>
+    </p>
+  </section>
+
+  <!-- 3) Optional "Our Values" or Team Section -->
+  <section class="about-values" role="region" aria-labelledby="about-values-title">
+    <h2 id="about-values-title"><%= __('ABOUT_VALUES_TITLE') %></h2>
+    <div class="values-grid">
+      <article class="value-item">
+        <h3><%= __('ABOUT_VALUE1_HEADING') %></h3>
+        <p><%= __('ABOUT_VALUE1_CONTENT') %></p>
+      </article>
+      <article class="value-item">
+        <h3><%= __('ABOUT_VALUE2_HEADING') %></h3>
+        <p><%= __('ABOUT_VALUE2_CONTENT') %></p>
+      </article>
+      <article class="value-item">
+        <h3><%= __('ABOUT_VALUE3_HEADING') %></h3>
+        <p><%= __('ABOUT_VALUE3_CONTENT') %></p>
+      </article>
+    </div>
+  </section>
+
 </main>
 
 <%- include('partials/footer') %>

@@ -1,0 +1,184 @@
+/*************************************************************
+ * ABOUT.SCSS
+ * Matches the site design: Montserrat font, color scheme,
+ * dark hero overlay with background image, consistent spacing.
+ *************************************************************/
+
+/* If not imported globally, import Montserrat here:
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*/
+
+/* Example main color for accents */
+$main-color: #5e9597; /* or #3f7374 or #9CBBBC, whichever matches your site */
+
+/* About Page Container */
+.about-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* 1) Hero Section */
+.about-hero {
+    position: relative;
+    min-height: 60vh;
+    /* Replace with your actual path to the about image */
+    background: url('/images/zahaa-about.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    /* Align items to the bottom */
+    align-items: flex-end;
+    /* Center horizontally */
+    justify-content: center;
+  
+    /* Dark overlay for contrast */
+    &__overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+      content: "";
+    }
+  
+    /* The text container at the bottom */
+    &__content {
+      position: relative;
+      z-index: 2; /* above the overlay */
+      text-align: center;
+      color: #fff;
+      max-width: 700px;
+      /* Some bottom spacing so the text isn’t flush with the edge */
+      margin-bottom: 2rem;
+      padding: 0 1rem; /* optional side padding */
+  
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+  
+      &__subtitle {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  
+
+/* 2) Main About Content */
+.about-content {
+  padding: 3rem 6rem;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  #about-main-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $main-color;
+  }
+
+  .about-paragraph {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .about-highlights {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    li {
+      background-color: $main-color;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($main-color, 10%);
+      }
+    }
+  }
+
+  .about-mission {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+  }
+}
+
+/* 3) Values or Additional Section */
+.about-values {
+  padding: 3rem 6rem;
+  background-color: #fff;
+  text-align: center;
+
+  #about-values-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: $main-color;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .value-item {
+      background-color: #fefefe;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: $main-color;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .about-content,
+  .about-values {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-hero {
+    min-height: 50vh;
+    &__content {
+      h1 {
+        font-size: 2rem;
+      }
+      &__subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+}

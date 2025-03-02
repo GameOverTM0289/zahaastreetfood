@@ -1,15 +1,151 @@
 <%- include('partials/header') %>
-<title><%= __('GALLERY_PAGE_TITLE') %></title>
 
-<main>
-  <h1><%= __('GALLERY_TITLE') %></h1>
-  <div class="gallery">
-    <!-- Example images (adjust paths/names) -->
-    <img src="/images/gallery1.jpg" alt="ZAHAA Interior" />
-    <img src="/images/gallery2.jpg" alt="Neon Sign" />
-    <img src="/images/gallery3.jpg" alt="Delicious Wraps" />
-    <!-- Add more images as needed -->
+<!-- GALLERY PAGE -->
+<!-- 
+  Assumes your partials/header.ejs includes:
+    <!DOCTYPE html>
+    <html lang="<%= locale || 'en' %>">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%= __('GALLERY_PAGE_TITLE') %></title>
+      <meta name="description" content="<%= __('PAGE_DESCRIPTION') %>">
+      <link rel="stylesheet" href="/css/gallery.css">
+    </head>
+    <body>
+      <header> ... nav ... </header>
+-->
+
+<main class="gallery-page" role="main">
+
+  <h1 class="gallery-title"><%= __('GALLERY_TITLE') %></h1>
+
+  <!-- Responsive mosaic-style grid -->
+  <section class="gallery-grid">
+    <!-- 17 images. Each "gallery-item" links to a lightbox anchor (#imgN). -->
+    <div class="gallery-item">
+      <a href="#img1"><img src="/images/gallery-1.jpeg" alt="Gallery 1"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img2"><img src="/images/gallery-2.jpeg" alt="Gallery 2"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img3"><img src="/images/gallery-3.jpeg" alt="Gallery 3"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img4"><img src="/images/gallery-4.jpeg" alt="Gallery 4"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img5"><img src="/images/gallery-5.jpeg" alt="Gallery 5"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img6"><img src="/images/gallery-6.jpeg" alt="Gallery 6"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img7"><img src="/images/gallery-7.jpeg" alt="Gallery 7"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img8"><img src="/images/gallery-8.jpeg" alt="Gallery 8"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img9"><img src="/images/gallery-9.jpeg" alt="Gallery 9"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img10"><img src="/images/gallery-10.jpeg" alt="Gallery 10"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img11"><img src="/images/gallery-11.jpeg" alt="Gallery 11"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img12"><img src="/images/gallery-12.jpeg" alt="Gallery 12"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img13"><img src="/images/gallery-13.jpeg" alt="Gallery 13"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img14"><img src="/images/gallery-14.jpeg" alt="Gallery 14"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img15"><img src="/images/gallery-15.jpeg" alt="Gallery 15"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img16"><img src="/images/gallery-16.jpeg" alt="Gallery 16"></a>
+    </div>
+    <div class="gallery-item">
+      <a href="#img17"><img src="/images/gallery-17.jpeg" alt="Gallery 17"></a>
+    </div>
+  </section>
+
+  <!-- Lightbox Overlays using :target -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-1.jpeg" alt="Gallery 1" />
   </div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-2.jpeg" alt="Gallery 2" />
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-3.jpeg" alt="Gallery 3" />
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-4.jpeg" alt="Gallery 4" />
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-5.jpeg" alt="Gallery 5" />
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-6.jpeg" alt="Gallery 6" />
+  </div>
+  <div id="img7" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-7.jpeg" alt="Gallery 7" />
+  </div>
+  <div id="img8" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-8.jpeg" alt="Gallery 8" />
+  </div>
+  <div id="img9" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-9.jpeg" alt="Gallery 9" />
+  </div>
+  <div id="img10" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-10.jpeg" alt="Gallery 10" />
+  </div>
+  <div id="img11" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-11.jpeg" alt="Gallery 11" />
+  </div>
+  <div id="img12" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-12.jpeg" alt="Gallery 12" />
+  </div>
+  <div id="img13" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-13.jpeg" alt="Gallery 13" />
+  </div>
+  <div id="img14" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-14.jpeg" alt="Gallery 14" />
+  </div>
+  <div id="img15" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-15.jpeg" alt="Gallery 15" />
+  </div>
+  <div id="img16" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-16.jpeg" alt="Gallery 16" />
+  </div>
+  <div id="img17" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="/images/gallery-17.jpeg" alt="Gallery 17" />
+  </div>
+
 </main>
 
 <%- include('partials/footer') %>

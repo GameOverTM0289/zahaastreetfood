@@ -23,11 +23,11 @@
 
         <!-- CTA Buttons -->
         <div class="hero-cta-buttons">
-          <a class="cta-button cta-button--primary" href="#delivery-partners">
+          <a class="cta-button cta-button--primary" href="#delivery-title">
             <!-- “Order on Wolt” -->
             <%= __('HOME_HERO_CTA_DELIVER') %>
           </a>
-          <a class="cta-button cta-button--secondary" href="#featured-menu">
+          <a class="cta-button cta-button--secondary" href="/menu">
             <!-- “Order on Baboon” -->
             <%= __('HOME_HERO_CTA_MENU') %>
           </a>
@@ -241,30 +241,35 @@
     role="region"
     aria-labelledby="delivery-title"
   >
-    <h2 id="delivery-title">Get It Delivered to Your Doorstep</h2>
+    <h2 id="delivery-title"><%- __("DELIVERY_TITLE")%></h2>
     <p>
-      Don’t feel like stepping out? We’ve got you covered. Thanks to our
-      <strong>trusted delivery partners</strong>, you can enjoy ZAHAA’s
-      mouthwatering dishes from the comfort of your home. Browse our menu on
-      <strong>Wolt</strong> or <strong>Baboon</strong> and experience
-      street-food bliss without leaving your couch.
+      <%- __("DELIVERY_DESC").replace("{strong}", "<strong>").replace("{/strong}", "</strong>") %>
+      
     </p>
 
     <div class="delivery-logos">
-      <img src="/images/wolt-logo.png" alt="Wolt Delivery Logo" />
-      <img src="/images/baboon-logo.png" alt="Baboon Delivery Logo" />
+      <a
+        href="https://wolt.com/en/alb/tirana/restaurant/zahaa-street-food"
+        >      <img style="height: 120px;" src="/images/wolt-logo.png" alt="Wolt Delivery Logo" />
+        </a
+      >
+      <a
+        href="https://www.baboon.al/tirana/zahaa/menu-porosit-online"
+        >      <img src="/images/baboon-logo.png" alt="Baboon Delivery Logo" />
+        </a
+      >
     </div>
 
     <div class="delivery-buttons">
       <a
         class="delivery-button wolt"
-        href="https://wolt.example.com/your-restaurant"
-        >Order on Wolt</a
+        href="https://wolt.com/en/alb/tirana/restaurant/zahaa-street-food"
+        ><%- __("DELIVERY_BUTTON_WOLT")%></a
       >
       <a
         class="delivery-button baboon"
-        href="https://baboon.example.com/your-restaurant"
-        >Order on Baboon</a
+        href="https://www.baboon.al/tirana/zahaa/menu-porosit-online"
+        ><%- __("DELIVERY_BUTTON_BABOON")%></a
       >
     </div>
   </section>
@@ -275,21 +280,33 @@
     role="region"
     aria-labelledby="location-title"
   >
-    <h2 id="location-title">Find Us & Dig In</h2>
+    <h2 id="location-title"><%- __("LOCATION_TITLE")%></h2>
     <p>
-      We’re conveniently located in the heart of town, ready to serve up fresh,
-      flavorful bites from morning until late. Come visit us for a quick lunch,
-      a relaxed dinner, or a late-night snack!
+      <%- __("LOCATION_DESC")%>
+      
     </p>
 
-    <address class="restaurant-address">123 Flavor Street, Foodie Town</address>
+    <!-- Just the map part (no title/buttons) -->
+<div class="map-container">
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11985.146354372753!2d19.823953064767153!3d41.32438109092354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031bdc7f4eee7%3A0x554d84d45831c8fb!2sZAHAA!5e0!3m2!1sen!2s!4v1740910265361!5m2!1sen!2s"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+  </div>
+</div>
+
+    <address class="restaurant-address"><a class="restaurant-address" href="https://maps.app.goo.gl/N1q1LgsfcuP4L4Yd6">Vath Koreshi, Tiranë 1010</a></address>
 
     <div class="opening-hours">
-      <p><strong>Mon – Fri:</strong> 11 AM – 11 PM</p>
-      <p><strong>Sat – Sun:</strong> 12 PM – 12 AM</p>
+      <p><strong><%- __("WEEK_DAYS")%></strong> 7AM – 11PM</p>
+      <p><strong><%- __("WEEKEND_DAYS")%></strong> 7AM – 11AM</p>
     </div>
 
-    <a class="contact-button" href="/contact">Contact Us</a>
+    <a class="contact-button" href="/contact"><%- __("CONTACT_BUTTON")%></a>
   </section>
 </main>
 
