@@ -36,6 +36,7 @@
     </figure>
   </section>
 
+  <!-- 2) Partner section -->
   <section class="partner-section">
     <div class="container">
       <h2 class="heading-featured-in">Partner with</h2>
@@ -46,7 +47,7 @@
     </div>
   </section>
 
-  <!-- 2) Tagline & Neon Quotes -->
+  <!-- 3) Tagline & Neon Quotes -->
   <section
     class="tagline-section"
     role="region"
@@ -60,12 +61,9 @@
     </figure>
     <!-- Tagline 1 -->
     <div class="tagline-content">
-      <h2 class="tagline-quote tagline-1">
-        WRAPS, LAUGHS, AND NO TIME FOR HALFS!
-      </h2>
+      <h2 class="tagline-quote tagline-1"><%= __('HOME_TAGLINE_TITLE') %></h2>
 
       <p class="tagline-supporting-text">
-        <!-- Supporting text from refined content -->
         <%= __('HOME_TAGLINE_SUPPORT') %>
       </p>
     </div>
@@ -81,10 +79,33 @@
 
   <!-- 4) Tasty & Fresh -->
   <section class="tasty-fresh" role="region" aria-labelledby="tasty-title">
-    <h2 id="tasty-title">Tasty & Fresh, Every Single Day</h2>
-    <p><%= __('TASTY_TITLE') %></p>
+    <h2 id="tasty-title"><%= __('TASTY_TITLE') %></h2>
+    <div class="tasty-pics">
+      <img
+        src="/images/fresh-bites.jpeg"
+        alt="Crispy bites in a branded box"
+      />
+      <img
+        src="/images/fresh-bites-2.jpeg"
+        alt="Crispy bites in a branded box"
+      />
+      <img
+        src="/images/fresh-bites-3.jpeg"
+        alt="Crispy bites in a branded box"
+      />
+      <img
+        src="/images/fresh-bites-4.jpeg"
+        alt="Crispy bites in a branded box"
+      />
+  </div>
+      <p><%- __("TASTY_DESC").replace("{strong}", "<strong>").replace("{/strong}", "</strong>") %></p>
 
     <ul class="fresh-highlights">
+      <li>
+        <span style="font-weight: 700"><%= __('HIGHLIGHT_TITLE-3') %></span
+        ><br />
+        <%= __('HIGHLIGHT_DESC-3') %>
+      </li>
       <li>
         <span style="font-weight: 700"><%= __('HIGHLIGHT_TITLE-1') %></span
         ><br /><%= __('HIGHLIGHT_DESC-1') %>
@@ -94,47 +115,9 @@
         ><br />
         <%= __('HIGHLIGHT_DESC-2') %>
       </li>
-      <li>
-        <span style="font-weight: 700"><%= __('HIGHLIGHT_TITLE-3') %></span
-        ><br />
-        <%= __('HIGHLIGHT_DESC-3') %>
-      </li>
     </ul>
 
-    <div class="tasty-pics">
-      <figure class="fresh-image">
-        <img
-          src="/images/fresh-bites.jpeg"
-          alt="Crispy bites in a branded box, demonstrating fresh quality"
-        />
-      </figure>
-      <figure class="fresh-image">
-        <img
-          src="/images/fresh-bites-2.jpeg"
-          alt="Crispy bites in a branded box, demonstrating fresh quality"
-        />
-      </figure>
-    </div>
-  </section>
 
-  <!-- 3) Best Pick – Our Suflaki -->
-  <section class="best-pick" role="region" aria-labelledby="best-pick-title">
-    <h2 id="best-pick-title">Our Best Pick: Suflaki!</h2>
-    <p>
-      Suflaki is a timeless street food favorite that captures the spirit of
-      Greek and Mediterranean flavors. At ZAHAA, we marinate our tender cuts of
-      meat with a special blend of spices, fresh coriander, and olive oil.
-      Grilled to perfection and wrapped in our signature warm pita, it’s an
-      absolute must-try for first-timers and regulars alike. Pair it with our
-      homemade tzatziki or spicy sauces for an extra kick.
-    </p>
-
-    <figure class="best-pick-image">
-      <img
-        src="/images/suflaki.jpg"
-        alt="Close-up of our signature Suflaki dish"
-      />
-    </figure>
   </section>
 
   <!-- 5) About ZAHAA (Teaser) -->
@@ -143,19 +126,17 @@
     role="region"
     aria-labelledby="about-teaser-title"
   >
-    <h2 id="about-teaser-title">Who We Are</h2>
+  <div class="about-content">
+    <h2 id="about-teaser-title"><%= __('ABOUT_TITLE') %></h2>
     <p>
-      ZAHAA – GRILL & STREET FOOD was born from a passion for bold flavors,
-      friendly service, and a welcoming atmosphere. We believe that
-      <strong>great food</strong> and <strong>great company</strong> make the
-      best memories. Our team is committed to bringing a fresh twist to classic
-      street food—fusing Mediterranean tradition with contemporary flair.
-    </p>
-    <a class="about-button" href="/about">Learn More</a>
+      <%- __("ABOUT_DESC").replace("{strong}", "<strong>").replace("{/strong}", "</strong>") %>
 
+    </p>
+    <a class="about-button" href="/about"><%- __("ABOUT_BUTTON")%></a>
+</div>
     <figure class="about-image">
       <img
-        src="/images/about.jpg"
+        src="/images/about.jpeg"
         alt="Interior design with green leaves and modern lighting"
       />
     </figure>
@@ -168,83 +149,92 @@
     role="region"
     aria-labelledby="featured-menu-title"
   >
-    <h2 id="featured-menu-title">Check Out Our Signature Dishes</h2>
+    <h2 id="featured-menu-title"><%- __("FEATURED_MENU_TITLE")%></h2>
+    <!-- <figure class="featured-image">
+      <img
+        src="/images/sandwich-zahaa.jpeg"
+        alt="Close-up sandwich in front of a ZAHAA sign"
+      />
+    </figure> -->
 
     <!-- Example item highlights -->
     <div class="featured-items-grid">
+      <a style="text-decoration: none;" href="/menu" class="href">
       <article class="featured-item">
-        <h3>The ZAHAA Burger</h3>
+        
+        <img
+        src="/images/zahaa-burger.png"
+        alt="zahaa burger"
+      />
+        <h3>ZAHAA Burger</h3>
         <p>
-          A succulent patty, caramelized onions, crisp lettuce, coriander mayo,
-          and a brioche bun.
+          <%- __("FEATURED__ITEM_1")%>
+
         </p>
-      </article>
+      </article></a>
+
+      <a style="text-decoration: none;" href="/menu" class="href">
 
       <article class="featured-item">
-        <h3>Grilled Chicken Suflaki</h3>
+        <img
+        src="/images/aspasia-bowl.png"
+        alt="aspasia bowl"
+      />
+        <h3>Aspasia Bowl</h3>
         <p>
-          Tender marinated chicken skewers, tzatziki, tomatoes, and baby
-          spinach.
+          <%- __("FEATURED__ITEM_2")%>
+
         </p>
-      </article>
+      </article></a>
+
+      <a style="text-decoration: none;" href="/menu" class="href">
 
       <article class="featured-item">
-        <h3>Veggie Wrap</h3>
+        <img
+        src="/images/ramses-tortilla.png"
+        alt="ramses wrap"
+      />
+        <h3>Ramses Wrap</h3>
         <p>
-          Roasted veggies, baby spinach, feta cheese, and our homemade herb
-          sauce.
-        </p>
-      </article>
+          <%- __("FEATURED__ITEM_3")%>
 
-      <article class="featured-item">
-        <h3>Street Fries</h3>
-        <p>
-          Crispy fries loaded with cheese, spices, and a drizzle of our secret
-          sauce.
         </p>
       </article>
+      </a>
     </div>
 
     <p class="featured-menu-note">
-      Feeling hungry? There’s more where that came from! Indulge in our loaded
-      wraps, sizzling grill plates, and refreshing sides—each designed to
-      satisfy your cravings.
+      <%- __("FEATURED__NOTE").replace("{span}", "<span>").replace("{/span}", "</span>") %>
+
+      
     </p>
 
-    <a class="cta-button" href="/menu">View Full Menu</a>
+    <a class="cta-button" href="/menu">
+      <%- __("VIEW_MENU_BUTTON")%>
+    </a>
 
-    <figure class="featured-image">
+    
+  </section>
+
+  <!-- 7) Best Pick – Our Suflaki -->
+  <section class="best-pick" role="region" aria-labelledby="best-pick-title">
+    <h2 id="best-pick-title"><%- __("BEST_PICK_TITLE")%></h2>
+    <p>
+      <%- __("BEST_PICK_DESC")%>
+
+
+
+    </p>
+
+    <figure class="best-pick-image">
       <img
-        src="/images/sandwich.jpg"
-        alt="Close-up sandwich in front of a ZAHAA sign"
+        src="/images/suflaki.jpeg"
+        alt="Close-up of our signature Suflaki dish"
       />
     </figure>
   </section>
 
-  <!-- 7) Location & Opening Hours (Teaser) -->
-  <section
-    class="location-hours"
-    role="region"
-    aria-labelledby="location-title"
-  >
-    <h2 id="location-title">Find Us & Dig In</h2>
-    <p>
-      We’re conveniently located in the heart of town, ready to serve up fresh,
-      flavorful bites from morning until late. Come visit us for a quick lunch,
-      a relaxed dinner, or a late-night snack!
-    </p>
-
-    <address class="restaurant-address">123 Flavor Street, Foodie Town</address>
-
-    <div class="opening-hours">
-      <p><strong>Mon – Fri:</strong> 11 AM – 11 PM</p>
-      <p><strong>Sat – Sun:</strong> 12 PM – 12 AM</p>
-    </div>
-
-    <a class="contact-button" href="/contact">Contact Us</a>
-  </section>
-
-  <!-- 8) Delivery Partners -->
+  <!-- 8) Delivery Section -->
   <section
     id="delivery-partners"
     class="delivery-partners"
@@ -277,6 +267,29 @@
         >Order on Baboon</a
       >
     </div>
+  </section>
+
+  <!-- 7) Location & Opening Hours (Teaser) -->
+  <section
+    class="location-hours"
+    role="region"
+    aria-labelledby="location-title"
+  >
+    <h2 id="location-title">Find Us & Dig In</h2>
+    <p>
+      We’re conveniently located in the heart of town, ready to serve up fresh,
+      flavorful bites from morning until late. Come visit us for a quick lunch,
+      a relaxed dinner, or a late-night snack!
+    </p>
+
+    <address class="restaurant-address">123 Flavor Street, Foodie Town</address>
+
+    <div class="opening-hours">
+      <p><strong>Mon – Fri:</strong> 11 AM – 11 PM</p>
+      <p><strong>Sat – Sun:</strong> 12 PM – 12 AM</p>
+    </div>
+
+    <a class="contact-button" href="/contact">Contact Us</a>
   </section>
 </main>
 
