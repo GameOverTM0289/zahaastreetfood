@@ -3,10 +3,9 @@ const path = require("path");
 
 i18n.configure({
   locales: ["en", "sq"],
-  defaultLocale: "en", // Albanian is still the default
+  defaultLocale: "en", 
   directory: path.join(__dirname, "../locales"),
-  // queryParameter: 'lang',         // ?lang=en or ?lang=sq
-  cookie: "lang", // <--- tells i18n to store language in a cookie
+  cookie: "lang",
   autoReload: true,
   syncFiles: true,
 });
