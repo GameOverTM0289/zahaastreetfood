@@ -1,6 +1,4 @@
-/************************************************
- * controllers/menuController.js
- ************************************************/
+
 const fs = require('fs');
 const path = require('path');
 
@@ -14,7 +12,6 @@ exports.getMenuItems = (req, res, next) => {
     }
     try {
       const menuItems = JSON.parse(data);
-      // Attach the parsed items to req, pass to next
       req.menuItems = menuItems;
       next();
     } catch (parseErr) {
